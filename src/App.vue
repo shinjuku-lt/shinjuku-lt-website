@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/shunjuku_lt.png">
+    <img class="logo" src="./assets/sunjuku_lt.png">
     <router-view/>
   </div>
 </template>
@@ -18,6 +18,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  position: relative;
+  height: 100%;
+  background: url(./assets/background.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+.logo {
   margin-top: 60px;
 }
+
 </style>
