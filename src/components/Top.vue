@@ -1,28 +1,23 @@
 <template lang="pug">
   div#top
-    img(src="@/assets/sunjuku_lt.png")
-    h1 {{ msg }}
-    h2 Essential Links
+    shinjuku
     ul
-      li: a(href="#" target="_blank") Core Docs
-      li: a(href="#" target="_blank") Forum
-      li: a(href="#" target="_blank") Gitter Chat
-      li: a(href="#" target="_blank") Twitter
-    h2 Ecosystem
-    ul
-      li: a(ref="#" target="_blank") vue-router
-      li: a(ref="#" target="_blank") vuex
-      li: a(ref="#" target="_blank") vue-loader
-      li: a(ref="#" target="_blank") awesome-vue
+      li: a(href="#" target="_blank") AboutUs
+      li: a(href="#" target="_blank") Slide
+      li: a(href="#" target="_blank") Contact
 </template>
 
 <script>
+import shinjuku from './Shinjuku.vue'
 export default {
   name: 'Top',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    shinjuku
   }
 }
 </script>
