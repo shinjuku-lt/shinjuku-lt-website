@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img class="logo" src="./assets/sunjuku_lt.png">
     <router-view/>
   </div>
 </template>
