@@ -1,21 +1,13 @@
 <template lang="pug">
-  div#top
-    shinjuku
-    tab
-    router-view
+  div#slides
+    h1 Slides
 </template>
 
 <script>
-import shinjuku from './Shinjuku'
-import tab from './tab'
 export default {
-  name: 'Top',
+  name: 'Slides',
   data () {
     return {}
-  },
-  components: {
-    shinjuku,
-    tab
   }
 }
 </script>

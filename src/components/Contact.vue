@@ -1,21 +1,13 @@
 <template lang="pug">
-  div#top
-    shinjuku
-    tab
-    router-view
+  div#contact
+    h1 contact
 </template>
 
 <script>
-import shinjuku from './Shinjuku'
-import tab from './tab'
 export default {
-  name: 'Top',
+  name: 'Contact',
   data () {
     return {}
-  },
-  components: {
-    shinjuku,
-    tab
   }
 }
 </script>
