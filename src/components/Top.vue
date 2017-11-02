@@ -7,7 +7,7 @@
 
 <script>
 import shinjuku from './Shinjuku'
-import tab from './tab'
+import tab from './Tab'
 export default {
   name: 'Top',
   data () {
