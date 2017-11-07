@@ -1,6 +1,14 @@
 <template lang="pug">
   div#contact
-    h1 contact
+    p Shinjuku.LTでは現在connpass等での参加募集は行っておりません。
+      br
+      | 質問等ありましたらお気軽にTwitter で 
+      a(href="https://twitter.com/HonMarkHunt") @HonMarkHunt 
+      | までご連絡ください。
+      br
+      | また、ハッシュタグ 
+      a(href="https://twitter.com/search?q=%23shinjukult&src=typd") #shinjukult 
+      | で雰囲気などがわかるかもしれません。
 </template>
 
 <script>
