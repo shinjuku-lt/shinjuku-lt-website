@@ -1,6 +1,6 @@
 <template lang="pug">
   div#shinjuku
-    img(src="../assets/sunjuku_lt.png" width="25%")
+    img(src="../assets/shinjuku_lt.png" width="25%")
 </template>
 
 <script>
