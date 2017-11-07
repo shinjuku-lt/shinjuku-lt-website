@@ -10,7 +10,6 @@
 import {
   TAB
 } from '../constant/tab'
-console.log(TAB)
 
 export default {
   name: 'Tab',

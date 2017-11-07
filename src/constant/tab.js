@@ -12,4 +12,3 @@ export const TAB = [
     path: '/contact'
   }
 ]
-console.log(TAB)
