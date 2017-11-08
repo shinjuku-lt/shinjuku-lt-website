@@ -19,7 +19,6 @@ export default {
 
   position: relative;
   height: 100%;
-  background: url(./assets/background.jpg) center top no-repeat;
   background-size: cover;
 }
 
