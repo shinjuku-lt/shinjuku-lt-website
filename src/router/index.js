@@ -4,6 +4,7 @@ import Top from '@/components/Top'
 import AboutUs from '@/components/AboutUs'
 import Slides from '@/components/Slides'
 import Contact from '@/components/Contact'
+import Next from '@/components/Next'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
           path: '/contact',
           name: 'Contact',
           component: Contact
+        },
+        {
+          path: '/next',
+          name: 'Next',
+          component: Next
         }
       ]
     }
