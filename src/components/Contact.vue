@@ -3,7 +3,7 @@
     p Shinjuku.LTでは現在connpass等での参加募集は行っておりません。
       br
       | 質問等ありましたらお気軽にTwitter で
-      a(href="https://twitter.com/HonMarkHunt") @HonMarkHunt
+      a(href="https://twitter.com/HonMarkHunt" target="t_blank") @HonMarkHunt
       | までご連絡ください。
       br
       | また、ハッシュタグ
