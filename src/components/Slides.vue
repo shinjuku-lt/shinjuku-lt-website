@@ -1,11 +1,8 @@
 <template lang="pug">
 div#slides
-  select(v-model="selected")
-    option(v-for="slideYM in slideYMs") {{slideYM}}
-  span selected: {{selected}}
-  ul
-    li(v-for="slide in slides") {{slide.page}} {{ slide.name }}
-      iframe(:src='slide.page.url')
+  v-layout(row wrap)
+    v-flex(xs6)
+      v-select(label="開催年月" :items="slideYMs" v-model="selected")
 </template>
 
 <script>
@@ -14,7 +11,10 @@ import {
  } from '../constant/slide'
 let slideYMs = []
 Object.keys(SLIDES).forEach(function (month) {
-  slideYMs.push(month)
+  slideYMs.push({
+    text: month,
+    value: month
+  })
 }, SLIDES)
 let defaultYM = slideYMs[slideYMs.length - 1]
 export default {

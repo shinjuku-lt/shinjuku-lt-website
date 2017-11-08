@@ -6,10 +6,7 @@
         v-card
           tab
     main
-      v-container(fluid)
-      div
-        v-card
-          router-view
+      router-view
     v-footer
       span(class="text-center") ShinjukuLT
 </template>

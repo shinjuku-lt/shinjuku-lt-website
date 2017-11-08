@@ -2,7 +2,7 @@
   div#tab
     ul
       li(v-for="tab in tabs")
-        v-btn(fab large :to="tab.path" :style='tab.class' style="background-color:#FFF") {{ tab.name }}
+        v-btn(fab large :to="tab.path" :style='tab.style' style="background-color:#FFF") {{ tab.name }}
 </template>
 
 <script>
@@ -40,18 +40,4 @@ a {
   color: #42b983;
   font-size: 13px;
 }
-
-animalMidRed {
-  background-color: #CA6B6D
-}
-animalGreen {
-  background-color: #AEBF50
-}
-animalSkyBlue {
-  background-color: #77B4B8
-}
-animialBlue {
-  background-color: #3A507D
-}
-
 </style>
