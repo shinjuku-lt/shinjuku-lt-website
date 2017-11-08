@@ -2,7 +2,7 @@
   div#top
     div(class="header")
       header
-        img(src="../assets/sunjuku_lt.png" width="25%")
+        img(src="../assets/shinjuku_lt.png" width="25%")
         v-card
           tab
     main
