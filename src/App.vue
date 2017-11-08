@@ -15,11 +15,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #fff;
 
   position: relative;
   height: 100%;
-  background: url(./assets/background.jpg) center top no-repeat;
   background-size: cover;
 }
 

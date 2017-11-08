@@ -1,12 +1,20 @@
 <template lang="pug">
   div#top
-    shinjuku
-    tab
-    router-view
+    div(class="header")
+      header
+        img(src="../assets/shinjuku_lt.png" width="25%")
+        v-card
+          tab
+    main
+      v-container(fluid)
+      div
+        v-card
+          router-view
+    v-footer
+      span(class="text-center") ShinjukuLT
 </template>
 
 <script>
-import shinjuku from './Shinjuku'
 import tab from './Tab'
 export default {
   name: 'Top',
@@ -14,10 +22,16 @@ export default {
     return {}
   },
   components: {
-    shinjuku,
     tab
   }
 }
 </script>
+
+<<style>
+.header {
+  background: url(../assets/background.jpg) center top no-repeat;
+}
+</style>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
