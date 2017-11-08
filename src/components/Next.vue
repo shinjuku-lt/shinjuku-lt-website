@@ -5,7 +5,7 @@
     p 13:00~
     p
     |
-    a(href="https://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/vallaboratory") @Val研究所
+    a(href="https://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/vallaboratory" target="t_blank") @Val研究所
 
 </template>
 
