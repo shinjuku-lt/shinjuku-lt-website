@@ -17,12 +17,7 @@ export default {
   text-align: center;
 
   position: relative;
-  height: 100%;
   background-size: cover;
-}
-
-.logo {
-  margin-top: 60px;
 }
 
 </style>
