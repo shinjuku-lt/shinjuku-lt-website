@@ -11,7 +11,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Rounded Mplus 1c', Helvetica, Arial, mplus-1p-regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -20,4 +20,7 @@ export default {
   background-size: cover;
 }
 
+main {
+  font-family: "Rounded Mplus 1c";
+}
 </style>

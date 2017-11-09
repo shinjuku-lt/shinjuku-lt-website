@@ -1,14 +1,13 @@
 <template lang="pug">
   div#aboutus
     h2 Shinjuku.LTとは？
-    p
-    | Shinjuku.LTは
-    strong 世界で一番LTのハードルが低い勉強会
-    | を目的に開催している勉強会です。
-    br
-    | 勉強会で一番勉強になるのは、発表者と言われることがあります。
-    br
-    | ということは、発表する機会をつくるこで勉強になる人が増えるのではないかという理念を元に開催しています。
+    p Shinjuku.LTは
+      strong 世界で一番LTのハードルが低い勉強会
+      | を目的に開催している勉強会です。
+      br
+      | 「勉強会で一番勉強になるのは、発表者」と言われることがあります。
+      br
+      | ということは、発表する機会をつくるこで勉強になる人が増えるのではないかという理念を元に開催しています。
     h2 目的
     ul(style="list-style-type: none")
       li LTに慣れる
@@ -17,11 +16,14 @@
       li エンジニア同士で仲良くなりたい
     h2 開催場所
     p
-    |
-    a(href="https://www.val.co.jp/" target="t_blank") 株式会社Val研究所様
-    | 並びに同テクニカルエバンジェリストの
-    a(href="https://twitter.com/maruyamahiakru" target="t_blank") 丸山ひかるさん
-    | に会場を提供していただいております。
+      a(href="https://www.val.co.jp/" target="t_blank") 株式会社Val研究所様
+      | 並びに
+      br
+      |同テクニカルエバンジェリストの
+      a(href="https://twitter.com/maruyamahiakru" target="t_blank") 丸山ひかるさん
+      | に
+      br
+      | 会場を提供していただいております。
 </template>
 
 <script>
@@ -33,4 +35,9 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h2 {
+	font-weight: bold;
+	font-size: 28px;
+}
+</style>
