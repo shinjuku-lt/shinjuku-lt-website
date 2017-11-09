@@ -8,7 +8,7 @@
     main
       router-view
     v-footer
-      div.text-center ShinjukuLT
+      div.text-center Shinjuku.LT
 </template>
 
 <script>
