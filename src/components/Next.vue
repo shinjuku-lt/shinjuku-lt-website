@@ -31,7 +31,6 @@ h2 {
 }
 p {
   margin: 0 0 0 0;
-  font-weight: bold;
 }
 div.margin-bottom {
   margin-bottom: 25px;
