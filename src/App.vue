@@ -22,6 +22,9 @@ export default {
 
 main {
   font-family: "Rounded Mplus 1c";
+  color: #666;
+  width: 960px;
+  margin: auto;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
