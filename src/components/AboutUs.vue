@@ -1,29 +1,37 @@
 <template lang="pug">
   div#aboutus
     h2 Shinjuku.LTとは？
-    p Shinjuku.LTは
-      strong 世界で一番LTのハードルが低い勉強会
-      | を目的に開催している勉強会です。
-      br
-      | 「勉強会で一番勉強になるのは、発表者」と言われることがあります。
-      br
-      | ということは、発表する機会をつくるこで勉強になる人が増えるのではないかという理念を元に開催しています。
+    div.margin-bottom
+      p Shinjuku.LTは
+        strong 世界で一番LTのハードルが低い勉強会
+        | を目的に開催している勉強会です。
+      p 「勉強会で一番勉強になるのは、発表者」と言われることがあります。
+      p ということは、発表する機会をつくることで勉強になる人が増えるのではないかという理念を元に開催しています。
+      p 2016年09月に発足し、そこから毎月一回のペースで開催しています。
     h2 目的
-    ul(style="list-style-type: none")
+    ul.center
       li LTに慣れる
       li 定期的にアウトプットできる環境を作る
       li 人の話を聞いて知見を増やす
-      li エンジニア同士で仲良くなりたい
+      li エンジニア・デザイナー同士で繋がりを持つ
+    h2 ロゴ
+    div.margin-bottom
+      p Shinjuku.LTのロゴは、Nikeの“BeTrue”コレクションをサンプリングソースにして作りました。
+      p -------------------------------------------------------------------
+      p.italic “BeTrue”コレクション
+      p.italic 多様な個性を尊重するLGBTQコミュニティへオマージュを捧げ、サポートする意味合いを含めたコレクション
+      p -------------------------------------------------------------------
+      p 性別、年齢、出身地、やってる仕事、使っている言語など...、
+      strong いろんな人がいて、垣根がないサークルを作れる勉強会を目指しています。
     h2 開催場所
-    p
-      a(href="https://www.val.co.jp/" target="t_blank") 株式会社Val研究所様
-      | 並びに
-      br
-      |同テクニカルエバンジェリストの
-      a(href="https://twitter.com/maruyamahiakru" target="t_blank") 丸山ひかるさん
-      | に
-      br
-      | 会場を提供していただいております。
+    div.margin-bottom
+      p
+        a(href="https://www.val.co.jp/" target="t_blank") 株式会社Val研究所様 
+        | 並びに
+      p 同社テクニカルエバンジェリスト 
+        a(href="https://twitter.com/maruyamahiakru" target="t_blank") 丸山ひかるさん 
+        | に会場を提供していただいております。
+      p その他会議室などを予約して開催しています。
 </template>
 
 <script>
@@ -37,7 +45,29 @@ export default {
 
 <style scoped>
 h2 {
-	font-weight: bold;
-	font-size: 28px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #c96b6e;
+}
+ul.center {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+ul.center li {
+  list-style-type: none;
+}
+ul.center li:last-child {
+  margin-bottom: 25px;
+}
+p {
+  margin: 0 0 0 0;
+}
+p.italic {
+  font-style: italic;
+}
+div.margin-bottom {
+  margin-bottom: 25px;
 }
 </style>

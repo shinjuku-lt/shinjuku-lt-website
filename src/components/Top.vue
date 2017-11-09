@@ -1,14 +1,14 @@
 <template lang="pug">
   div#top
-    div(class="header")
+    div.header
       header
-        img(src="../assets/shinjuku_lt.png" width="25%")
+        img.logo(src="../assets/shinjuku_lt.png")
         v-card
           tab
     main
       router-view
     v-footer
-      span(class="text-center") ShinjukuLT
+      div.text-center Shinjuku.LT
 </template>
 
 <script>
@@ -24,11 +24,22 @@ export default {
 }
 </script>
 
-<<style>
+<style scoped>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
+  margin-bottom: 25px;
 }
+.logo {
+  width: 20%;
+  margin: 40px 0 10px 0;
+}
+.footer {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #CACACA
+}
+div.text-center {
+  color: #666;
+  margin: auto;
+}  
 </style>
-
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
