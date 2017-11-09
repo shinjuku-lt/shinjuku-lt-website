@@ -24,9 +24,10 @@ export default {
 }
 </script>
 
-<<style>
+<style>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
+  margin-bottom: 16px
 }
 </style>
 

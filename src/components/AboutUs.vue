@@ -40,4 +40,7 @@ h2 {
 	font-weight: bold;
 	font-size: 28px;
 }
+li:last-child {
+	margin-bottom: 16px;
+}
 </style>
