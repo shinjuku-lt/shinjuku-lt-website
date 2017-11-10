@@ -1,14 +1,14 @@
 <template lang="pug">
   div#top
-    div(class="header")
-      header
-        img(src="../assets/shinjuku_lt.png" width="25%")
-        v-card
-          tab
-    main
-      router-view
-    v-footer
-      span(class="text-center") ShinjukuLT
+    v-layout(row wrap)
+      v-flex(xs12)
+        div(class="header")
+          img(src="../assets/shinjuku_lt.png" width="25%")
+          v-card
+            tab
+      v-flex(xs12)
+        main
+        router-view
 </template>
 
 <script>
@@ -27,6 +27,7 @@ export default {
 <<style>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
+  height: 0px;
 }
 </style>
 
