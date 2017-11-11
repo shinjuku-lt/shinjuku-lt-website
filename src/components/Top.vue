@@ -1,6 +1,6 @@
 <template lang="pug">
   div#top
-    v-toolbar(height="auto" align-center)
+    v-toolbar(height="auto" align-center style="width:101%")
       v-layout(class="header")
         v-flex
           img(src="../assets/shinjuku_lt.png" width="25%")
