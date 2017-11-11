@@ -1,8 +1,12 @@
 <template lang="pug">
-  div#tab
-    ul
-      li(v-for="tab in tabs")
-        v-btn(fab large :to="tab.path" :style='tab.style' style="background-color:#FFF") {{ tab.name }}
+div#tab
+  v-container(fluid)
+    v-layout(row wrap)
+      v-flex(md8 offset-md2)
+        v-container(fluid grid-list-lg)
+          v-layout()
+            v-flex(md4 v-for="tab in tabs")
+              v-btn(fab large :to="tab.path"  :style='tab.style' style="background-color:#FFF") {{ tab.name }}
 </template>
 
 <script>
