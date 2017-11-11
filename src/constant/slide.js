@@ -5,8 +5,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/mFyxbBkT8LhfFP',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -14,8 +14,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://to4iki.github.io/slides/20160911_shinjukult/#1',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -23,8 +23,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/NsAQEL6mLqyCbF',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -34,8 +34,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/42a0e16143f146b28498a3f055ac30c2?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -43,8 +43,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/1wQtd2sqhP7eJx',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -54,8 +54,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/613b901fbc8545f9af2ea231253475bb?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -63,8 +63,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/JuOPIKhDcQ1wgW',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -72,8 +72,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/6f188031181347f19d75e1fc039da823?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -83,8 +83,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/w9BXLy55Z1CEns',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -94,8 +94,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/89420f7155ee4558800c9b0bacfa1c97?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -105,8 +105,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/4IKLKVLMGspkI7',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -114,8 +114,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/xMu6uwKB2C8QOF',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -123,8 +123,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/0c7abc11188b4f5e81d72c5ead0f32ea?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -134,8 +134,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/va4Cb9R7WDyaHG',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -143,8 +143,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/01511cf43dcf471db57967b7adbcf13a?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -154,8 +154,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/ac8390bb19ba4992b9ad7f045bcaab55?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -163,8 +163,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/f07319144ddc491da9c0b5c5dba61756?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -174,8 +174,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/611c47de8a4c448f8bf73fa7a3b7c6bd?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -183,8 +183,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/4eb0bc07e1694f9fa376d23cb83e6386?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -194,8 +194,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/624cb8b06bf54fca8ed8b60c6739ac45?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -205,8 +205,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/a0cf9dd090d446258e28e1651df1cf71?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -214,8 +214,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/f50105df0e244202882d8945c4555aeb?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -223,8 +223,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/32d936b896ca49ffb072471f9fea75a0?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
@@ -232,8 +232,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/f50105df0e244202882d8945c4555aeb?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ],
@@ -243,8 +243,8 @@ export const SLIDES = {
       auther: '',
       page: {
         url: 'https://speakerdeck.com/player/5d9420d156f04fcda7444bb9825d70ec?#',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ]
