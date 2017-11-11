@@ -1,9 +1,9 @@
 <template lang="pug">
 div#tab
-  v-container(fluid)
+  v-container(fluid class="min-reset-container")
     v-layout(row wrap)
       v-flex(md8 offset-md2 xs12)
-        v-container(fluid grid-list-lg)
+        v-container(fluid grid-list-lg class="min-reset-container")
           v-layout()
             v-flex(md4 xs6 v-for="tab in tabs")
               v-btn(fab :to="tab.path" :style='tab.style' style="background-color:#FFF") {{ tab.name }}
@@ -31,6 +31,16 @@ export default {
     width: 80px;
     height: 80px;
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .btn {
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+  }
+  .min-reset-container{
+    padding: 0 !important;
   }
 }
 
