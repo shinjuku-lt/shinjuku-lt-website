@@ -27,6 +27,9 @@ export default {
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
 }
+.layout.header{
+  margin: 0 !important;
+}
 .logo {
   width: 20%;
   margin: 40px 0 10px 0;
