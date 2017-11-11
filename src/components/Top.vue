@@ -23,6 +23,24 @@ export default {
 }
 </script>
 
+<style>
+@media screen and (max-width: 400px) {
+  .btn {
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+  }
+  .min-reset-container{
+    padding: 0 !important;
+  }
+  .slide-iframe{
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
+</style>
+
+
 <style scoped>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;

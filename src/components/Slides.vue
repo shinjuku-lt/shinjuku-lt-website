@@ -7,14 +7,14 @@ div#slides
         | 随時こちらにアップロードしていきます！
       v-flex(xs11 sm4  offset-sm4)
         v-select(label="開催年月を選択" :items="slideYMs" v-model="selected" prepend-icon="map" hint="選択すると、対象月に発表されたスライドが閲覧できます。")
-    v-container(fluid grid-list-lg)
+    v-container(fluid grid-list-lg class="min-reset-container")
       v-layout()
         v-flex(lg10 offset-lg1 md12 sm12 xs12)
             v-container(style="padding:0;")
               v-layout(row wrap)
                 v-flex(lg4 md6 sm12 v-for="slide in slides")
                   v-card(flat)
-                    iframe(:src='slide.page.url' :width='slide.page.width' :height='slide.page.height')
+                    iframe(:src='slide.page.url' :height='slide.page.height' class="slide-iframe")
                     p {{slide.auther}}
 </template>
 
