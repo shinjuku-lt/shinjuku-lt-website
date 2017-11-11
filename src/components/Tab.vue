@@ -6,7 +6,7 @@ div#tab
         v-container(fluid grid-list-lg)
           v-layout()
             v-flex(md4 xs6 v-for="tab in tabs")
-              v-btn(fab large :to="tab.path"  :style='tab.style' style="background-color:#FFF") {{ tab.name }}
+              v-btn(fab :to="tab.path" :style='tab.style' style="background-color:#FFF") {{ tab.name }}
 </template>
 
 <script>
@@ -26,6 +26,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media screen and (min-width: 960px) {
+  .btn {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+}
+
 #tab{
   margin-top: 20px;
   padding-bottom: 20px;
