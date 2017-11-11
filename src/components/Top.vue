@@ -1,14 +1,13 @@
 <template lang="pug">
   div#top
-    v-layout(row wrap)
-      v-flex(xs12)
-        div(class="header")
+    v-toolbar(height="auto" align-center)
+      v-layout(class="header")
+        v-flex
           img(src="../assets/shinjuku_lt.png" width="25%")
-          v-card
-            tab
-      v-flex(xs12)
-        main
-        router-view
+          tab
+    v-flex(xs12)
+      main
+      router-view
 </template>
 
 <script>
@@ -27,7 +26,6 @@ export default {
 <<style>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
-  height: 0px;
 }
 </style>
 
