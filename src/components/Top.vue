@@ -23,11 +23,21 @@ export default {
 }
 </script>
 
-<<style>
+<style scoped>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
 }
+.logo {
+  width: 20%;
+  margin: 40px 0 10px 0;
+}
+.footer {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #CACACA
+}
+div.text-center {
+  color: #666;
+  margin: auto;
+}  
 </style>
-
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -22,6 +22,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#tab{
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 h1, h2 {
   font-weight: normal;
 }
@@ -38,6 +42,7 @@ li {
 
 a {
   color: #42b983;
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: bold;
 }
 </style>
