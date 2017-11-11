@@ -5,7 +5,10 @@
 
 <script>
 export default {
-  name: 'app'
+  mounted () {
+    console.log('test')
+    parent.document.title = 'test'
+  }
 }
 </script>
 
