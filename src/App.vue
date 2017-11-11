@@ -7,6 +7,7 @@
 export default {
   mounted () {
     console.log('test')
+    parent.document.title = 'test'
   }
 }
 </script>
