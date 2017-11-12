@@ -43,11 +43,6 @@ export default {
     padding: 0 !important;
   }
 }
-
-#tab{
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
 h1, h2 {
   font-weight: normal;
 }

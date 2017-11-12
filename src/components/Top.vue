@@ -1,9 +1,9 @@
 <template lang="pug">
   div#top
     v-toolbar(height="auto" align-center)
-      v-layout(class="header")
+      v-layout.header
         v-flex
-          img(src="../assets/shinjuku_lt.png" width="25%")
+          img.logo(src="../assets/shinjuku_lt.png")
           tab
     v-flex(xs12)
       main
@@ -40,7 +40,6 @@ export default {
 }
 </style>
 
-
 <style scoped>
 .header {
   background: url(../assets/background.jpg) center top no-repeat;
@@ -49,13 +48,8 @@ export default {
   margin: 0 !important;
 }
 .logo {
-  width: 20%;
-  margin: 40px 0 10px 0;
-}
-.footer {
-  margin-top: 80px;
-  width: 100%;
-  background-color: #CACACA
+  width: 25%;
+  margin: 40px 0 0 0;
 }
 div.text-center {
   color: #666;

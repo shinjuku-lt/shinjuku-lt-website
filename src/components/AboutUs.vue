@@ -5,20 +5,22 @@ div#aboutus
       v-flex(xs12)
         v-card(flat)
           h2 Shinjuku.LTとは？
-          p Shinjuku.LTは
-            strong 世界で一番LTのハードルが低い勉強会
-            | を目的に開催している勉強会です。
-          p 「勉強会で一番勉強になるのは、発表者」と言われることがあります。
-          p ということは、発表する機会をつくることで勉強になる人が増えるのではないかという理念を元に開催しています。
-          p 2016年09月に発足し、そこから毎月一回のペースで開催しています。
+          div.margin-bottom
+            p Shinjuku.LTは
+              strong 世界で一番LTのハードルが低い勉強会
+              | を目的に開催している勉強会です。
+            p 「勉強会で一番勉強になるのは、発表者」と言われることがあります。
+            p ということは、発表する機会をつくることで勉強になる人が増えるのではないかという理念を元に開催しています。
+            p 2016年09月に発足し、そこから毎月一回のペースで開催しています。
       v-flex(xs12)
         v-card(flat)
           h2 目的
-          ul.center
-            li LTに慣れる
-            li 定期的にアウトプットできる環境を作る
-            li 人の話を聞いて知見を増やす
-            li エンジニア・デザイナー同士で繋がりを持つ
+          div.margin-bottom
+            ul.center
+              li LTに慣れる
+              li 定期的にアウトプットできる環境を作る
+              li 人の話を聞いて知見を増やす
+              li エンジニア・デザイナー同士で繋がりを持つ
       v-flex(xs12)
         v-card(flat)
           h2 ロゴ
@@ -67,13 +69,13 @@ ul.center {
 ul.center li {
   list-style-type: none;
 }
-ul.center li:last-child {
-  margin-bottom: 25px;
-}
 p {
   margin: 0 0 0 0;
 }
 p.italic {
   font-style: italic;
+}
+div.margin-bottom {
+  margin-bottom: 25px;
 }
 </style>
