@@ -45,11 +45,6 @@ export default {
 </style>
 
 <style scoped>
-@media screen and (max-width: 400px) {
-  .header {
-    background: url(../assets/background.jpg) left no-repeat fixed;
-  }
-}
 .header {
   background: url(../assets/background.jpg) left/cover no-repeat fixed;
 }
