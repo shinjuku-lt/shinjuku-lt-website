@@ -1,37 +1,59 @@
 export const SLIDES = {
   201710: [
     {
-      name: 'ホンマークハントのスライド',
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
-      name: 'ホンマークハントのスライド2',
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
+      }
+    },
+    {
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
+      page: {
+        url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
+        width: 335,
+        height: 230
+      }
+    },
+    {
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
+      page: {
+        url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
+        width: 335,
+        height: 230
       }
     }
   ],
   201711: [
     {
-      name: 'ハントさんのスライド',
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     },
     {
-      name: 'ハントさんのスライド',
+      title: 'アドテクやってるエンジニアだけどどうしてもみんなに伝えたいことがある。',
+      auther: '@HonMarkHunt',
       page: {
         url: 'http://www.slideshare.net/slideshow/embed_code/key/1z6SwGsXCxmgUN',
-        width: 340,
-        height: 290
+        width: 335,
+        height: 230
       }
     }
   ]
