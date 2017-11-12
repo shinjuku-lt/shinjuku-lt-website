@@ -226,15 +226,6 @@ export const SLIDES = {
         width: 335,
         height: 230
       }
-    },
-    {
-      name: '',
-      auther: '',
-      page: {
-        url: 'https://speakerdeck.com/player/f50105df0e244202882d8945c4555aeb?#',
-        width: 335,
-        height: 230
-      }
     }
   ],
   201709: [
