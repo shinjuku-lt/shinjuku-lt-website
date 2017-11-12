@@ -37,12 +37,16 @@ export default {
     padding: 0 !important;
     width: 100% !important;
   }
+  .logo {
+    width: 25%;
+    margin: 20px 0 0 0 !important;
+  }
 }
 </style>
 
 <style scoped>
 .header {
-  background: url(../assets/background.jpg) center top no-repeat;
+  background: url(../assets/background.jpg) left/cover no-repeat fixed;
 }
 .layout.header{
   margin: 0 !important;

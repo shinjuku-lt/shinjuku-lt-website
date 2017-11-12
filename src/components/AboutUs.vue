@@ -26,10 +26,14 @@ div#aboutus
           h2 ロゴ
           div.margin-bottom
             p Shinjuku.LTのロゴは、Nikeの“BeTrue”コレクションをサンプリングソースにして作りました。
-            p -------------------------------------------------------------------
-            p.italic “BeTrue”コレクション
-            p.italic 多様な個性を尊重するLGBTQコミュニティへオマージュを捧げ、サポートする意味合いを含めたコレクション
-            p -------------------------------------------------------------------
+            v-container(fluid)
+              v-layout(row wrap)
+                v-flex(xs12 sm6 offset-sm3 md4 offset-md4)
+                  hr
+                  v-card(flat)
+                    p.italic “BeTrue”コレクション
+                    p.italic 多様な個性を尊重するLGBTQコミュニティへオマージュを捧げ、サポートする意味合いを含めたコレクション
+                  hr
             p 性別、年齢、出身地、やってる仕事、使っている言語など...、
             strong いろんな人がいて、垣根がないサークルを作れる勉強会を目指しています。
       v-flex(xs12)
