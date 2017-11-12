@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .header {
-  background: url(../assets/background.jpg) center top no-repeat;
+  background: url(../assets/background.jpg) top/cover no-repeat fixed;
 }
 .layout.header{
   margin: 0 !important;
