@@ -1,7 +1,7 @@
 <template lang="pug">
   div#top
-    v-toolbar(height="auto" align-center)
-      v-layout.header
+    v-toolbar(height="auto" align-center style="width:101%")
+      v-layout(class="header")
         v-flex
           img.logo(src="../assets/shinjuku_lt.png")
           tab
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .btn {
     width: 50px;
     height: 50px;
