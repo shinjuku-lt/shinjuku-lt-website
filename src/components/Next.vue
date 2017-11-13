@@ -7,9 +7,12 @@ div#head
           v-layout(row wrap)
             v-flex(md4 xs6)
               h2 次回開催日
-              p 2017/11/12
+              p 2017/12/17
               p Sunday
-              p 13:00~
+              ul(style="text-align:left")
+                li 10:58~ : モブプログラミング会
+                li 13:00~ : 昼食
+                li 14:00~ : Shinjuku.LT
             v-flex(md4 xs6)
               h2 場所
               p 東京都杉並区高円寺北2-3-17
