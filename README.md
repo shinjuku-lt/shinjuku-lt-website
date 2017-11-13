@@ -1,4 +1,4 @@
-# sunzukult
+# shinjuku-lt-website
 
 > A Vue.js project
 
