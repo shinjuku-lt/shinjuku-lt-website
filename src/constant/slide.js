@@ -238,5 +238,34 @@ export const SLIDES = {
         height: 230
       }
     }
+  ],
+  201710: [
+    {
+      name: 'apidocument',
+      auther: '',
+      page: {
+        url: 'https://speakerdeck.com/player/385e6705f84c4b64ab27b6b787c31873?#',
+        width: 335,
+        height: 230
+      }
+    },
+    {
+      name: 'movieformat',
+      auther: '',
+      page: {
+        url: 'https://speakerdeck.com/player/0dbdfa6f831a43a2859faeec8d4b5565?#',
+        width: 335,
+        height: 230
+      }
+    },
+    {
+      name: 'goodsite',
+      auther: '',
+      page: {
+        url: 'https://speakerdeck.com/player/dd15b9dd01fc408fb5c1b3372612204e?#',
+        width: 335,
+        height: 230
+      }
+    }
   ]
 }
