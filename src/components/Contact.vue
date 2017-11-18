@@ -7,6 +7,10 @@ div#contact
         p Shinjuku.LTは現在、会場の兼ね合いでconnpass等の外部サイトでの参加募集は行っておりません。
         p お手数ですが、下記Twitterで運営のホンマークハントまで一度ご連絡頂ければと思います。
       v-flex(xs12 class="margin-bottom")
+        h2 参加される方へ
+        P Shinjuku.LTに誘いたい！と思った人をどんどん誘いましょう。
+
+      v-flex(xs12 class="margin-bottom")
         h2 Twitter
         p Shinjuku.LTに興味を持っていただいた方や、ご質問など。
         p お気軽に 
