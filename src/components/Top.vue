@@ -3,7 +3,7 @@
     v-toolbar(height="auto" align-center style="width:101%")
       v-layout(class="header")
         v-flex
-          img.logo(src="../assets/shinjuku_lt.png")
+          img.logo(src="../assets/shinjukuLT_logo.svg")
           tab
     v-flex(xs12)
       main
