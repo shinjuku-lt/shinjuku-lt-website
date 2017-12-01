@@ -8,16 +8,9 @@ div#slides
           div.margin-bottom
             v-flex(xs12 sm6 offset-sm3 md4 offset-md4)
               p
-                b Shinjuku.LTはいろんな人がいて垣根がないサークルを作れる勉強会を目指しています
-              | 発表内容に制限はありません。
-              | 聞いて欲しい話、ためになった話などがあれば、どんどん発表していきましょう！
-          div.margin-bottom
-            v-flex(xs12 sm6 offset-sm3 md4 offset-md4)
-              p
-                b Shinjuku.LTは世界で一番LTのハードルが低い勉強会です。
-              | 発表時間の下限上限は無いので、話したい内容に全力を注いでください。
-              | LTから発表に慣れていきましょう！
-
+                b 垣根がないサークルを作れる勉強会を目指しています
+              | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など発表内容について制限はありません。
+              p LTといえば基本的に5分ですが、ShinjukuLTでは5分の制限も設けておりません。そのためボリューミーなスライドもございます。
       v-flex(xs12)
         v-card(flat)
           h2.tabtitle スライド
