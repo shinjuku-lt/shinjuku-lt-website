@@ -1,5 +1,6 @@
 <template lang="pug">
   div#top
+    github
     v-toolbar(height="auto" align-center style="width:101%")
       v-layout(class="header")
         v-flex
@@ -12,13 +13,14 @@
 
 <script>
 import tab from './Tab'
+import github from './Github'
 export default {
   name: 'Top',
   data () {
     return {}
   },
   components: {
-    tab
+    tab, github
   }
 }
 </script>
