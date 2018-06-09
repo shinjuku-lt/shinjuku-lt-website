@@ -7,20 +7,25 @@ div#head
           v-layout(row wrap)
             v-flex(md4 xs6)
               h2 次回開催日
-              p 2018/04/14
-              p Saturday
+              p 2018/06/28
+              p Wednesday
               ul(style="text-align:left")
-                li 13:00~17:00 : Shinjuku.LT
-                li 17:00~ : 飲み会
+                li 19:00 開場
+                li 19:30 ~ 19:30 飲み会
+                li 19:35 ~ 19:40 Good&New
+                li 19:40 ~ 20:30 LT
+                li 20:30 ~ 20:40 休憩
+                li 20:40 ~ 21:40 LT
+                li 21:40 締め・解散
             v-flex(md4 xs6)
               h2 場所
-              p 東京都杉並区高円寺北2-3-17
+              p 〒150-0002 東京都渋谷区渋谷2-12-19 東建インターナショナルビル
               |
-              a(href="https://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/vallaboratory" target="t_blank") @Val研究所
+              a(href="https://kddi-cf.co.jp/company/" target="t_blank") @KDDIコマースフォワード株式会社 渋谷ラボ
     v-layout(row wrap offset-sm3)
       v-flex(xs12 md6 offset-md3)
         iframe.map(
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8194981954025!2d139.65022263936683!3d35.706059208395956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f28799022b3f%3A0x845f2d6f10bec5ed!2z44CSMTY2LTAwMDIg5p2x5Lqs6YO95p2J5Lim5Yy66auY5YaG5a-65YyX77yS5LiB55uu77yT4oiS77yR77yX!5e0!3m2!1sja!2sjp!4v1510250058670"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6483.489332456037!2d139.707352!3d35.658662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c08e8672e356523!2z5p2x5bu644Kk44Oz44K_44O844OK44K344On44OK44Or44OT44Or!5e0!3m2!1sja!2sjp!4v1528510872109"
           frameborder="0"
           style="width: 100% !important"
           )
