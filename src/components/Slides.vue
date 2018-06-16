@@ -24,7 +24,7 @@ div#slides
         v-flex(lg10 offset-lg1 md12 sm12 xs12)
             v-container(style="padding:0;")
               v-layout(row wrap)
-                v-flex(lg4 md6 sm12 v-for="slide in slides")
+                v-flex(lg4 md6 sm12 v-for="(slide, index) in slides" :key="index")
                   v-card(flat)
                     iframe(:src='slide.page.url' :height='slide.page.height' class="slide-iframe")
                     p {{slide.auther}}
