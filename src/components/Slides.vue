@@ -18,7 +18,7 @@ div#slides
             p 過去の ShinjukuLTで発表されたスライドです。
             | 随時こちらにアップロードしていきます！
       v-flex(xs11 sm4  offset-sm4)
-        v-select(label="開催年月を選択" :items="slideYMs" v-model="selected" prepend-icon="map" hint="選択すると、対象月に発表されたスライドが閲覧できます。")
+        v-select(label="開催年月を選択" :items="slideYMs" v-show="selectShow" v-model="selected" prepend-icon="map" hint="選択すると、対象月に発表されたスライドが閲覧できます。")
     v-container(fluid grid-list-lg class="min-reset-container")
       v-layout()
         v-flex(lg10 offset-lg1 md12 sm12 xs12)
@@ -31,14 +31,9 @@ div#slides
 </template>
 
 <script>
-import { SLIDES } from '../constant/slide'
+import axios from 'axios'
+let SLIDES = {}
 let slideYMs = []
-Object.keys(SLIDES).forEach(function (month) {
-  slideYMs.push({
-    text: month,
-    value: month
-  })
-}, SLIDES)
 let defaultYM = slideYMs[slideYMs.length - 1]
 export default {
   name: 'Slides',
@@ -46,13 +41,33 @@ export default {
     return {
       loaded: true,
       selected: defaultYM,
+      selectShow: false,
       slideYMs: slideYMs,
       slides: SLIDES[this.selected],
       test: 'border:1px solid #F0F'
     }
   },
+  mounted () {
+    axios.get('http://private-3507cc-mnuma.apiary-mock.com/v1/slide')
+      .then(response => {
+        SLIDES = response.data
+        slideYMs = []
+        Object.keys(SLIDES).forEach(function (month) {
+          slideYMs.push({
+            text: month,
+            value: month
+          })
+        }, SLIDES)
+        this.slideYMs = slideYMs
+      })
+  },
   updated () {
     this.slides = SLIDES[this.selected]
+  },
+  watch: {
+    slideYMs: function (val) {
+      this.selectShow = true
+    }
   }
 }
 </script>
