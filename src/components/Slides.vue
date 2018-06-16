@@ -1,5 +1,5 @@
 <template lang="pug">
-div#slides
+div#slides(data-app="true")
   v-container(fluid)
     v-layout(row wrap offset-sm3)
       v-flex(xs12)
@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://private-3507cc-mnuma.apiary-mock.com/v1/slide')
+    axios.get('https://private-3507cc-mnuma.apiary-mock.com/v1/slide')
       .then(response => {
         SLIDES = response.data
         slideYMs = []
