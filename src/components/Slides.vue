@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('https://private-3507cc-mnuma.apiary-mock.com/v1/slide')
+    axios.get('https://shinjuku-lt-backend-rxajphwrnv.now.sh/slide')
       .then(response => {
         SLIDES = response.data
         slideYMs = []
