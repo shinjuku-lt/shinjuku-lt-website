@@ -31,9 +31,7 @@ div#slides
 </template>
 
 <script>
-import {
-  SLIDES
- } from '../constant/slide'
+import { SLIDES } from '../constant/slide'
 let slideYMs = []
 Object.keys(SLIDES).forEach(function (month) {
   slideYMs.push({
