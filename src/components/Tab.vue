@@ -5,7 +5,7 @@ div#tab
       v-flex(md8 offset-md2 xs12)
         v-container(fluid grid-list-lg class="min-reset-container")
           v-layout()
-            v-flex(md4 xs6 v-for="tab in tabs")
+            v-flex(md4 xs6 v-for="(tab, index) in tabs" :key="index")
               v-btn(fab :to="tab.path" :style='tab.style' style="background-color:#FFF") {{ tab.name }}
 </template>
 
