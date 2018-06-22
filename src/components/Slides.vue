@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('https://shinjuku-lt-backend-rxajphwrnv.now.sh/slide')
+    axios.get('https://shinjuku-lt-backend.now.sh/slide')
       .then(response => {
         SLIDES = response.data
         slideYMs = []
