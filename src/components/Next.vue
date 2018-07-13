@@ -7,20 +7,21 @@ div#head
           v-layout(row wrap)
             v-flex(md4 xs6)
               h2 次回開催日
-              p 2018/04/14
-              p Saturday
-              ul(style="text-align:left")
-                li 13:00~17:00 : Shinjuku.LT
-                li 17:00~ : 飲み会
+              p 2018/07/25
+              p Wednesday
+              ul(style="text-align:center")
+                li 19:00~ : 開場
+                li 19:45~21:00 : LT
+                li 21:30~ : 飲み会
             v-flex(md4 xs6)
               h2 場所
-              p 東京都杉並区高円寺北2-3-17
+              p 東京都渋谷区円山町19-1 渋谷プライムプラザ
               |
-              a(href="https://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/vallaboratory" target="t_blank") @Val研究所
+              a(href="https://www.cyberagent.co.jp/way/features/list/detail/id=13541" target="t_blank") @株式会社 サイバーエージェント CREATIVE Lounge
     v-layout(row wrap offset-sm3)
       v-flex(xs12 md6 offset-md3)
         iframe.map(
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8194981954025!2d139.65022263936683!3d35.706059208395956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f28799022b3f%3A0x845f2d6f10bec5ed!2z44CSMTY2LTAwMDIg5p2x5Lqs6YO95p2J5Lim5Yy66auY5YaG5a-65YyX77yS5LiB55uu77yT4oiS77yR77yX!5e0!3m2!1sja!2sjp!4v1510250058670"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.829864286873!2d139.69281761570687!3d35.656563180200095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55eb1712fb%3A0x956a31b833a23cfa!2z44CSMTUwLTAwNDQg5p2x5Lqs6YO95riL6LC35Yy65YaG5bGx55S677yR77yZ4oiS77yRIOa4i-iwt-ODl-ODqeOCpOODoOODl-ODqeOCtg!5e0!3m2!1sja!2sjp!4v1531467310753"
           frameborder="0"
           style="width: 100% !important"
           )
