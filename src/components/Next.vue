@@ -7,31 +7,56 @@ div#head
           v-layout(row wrap)
             v-flex(md4 xs6)
               h2 次回開催日
-              p 2018/07/25
-              p Wednesday
+              p {{nextDate}}
+              p {{dayOfWeek}}
               ul(style="text-align:center")
-                li 19:00~ : 開場
-                li 19:45~21:00 : LT
-                li 21:30~ : 飲み会
+                li(v-for="(v, k) in schedule")
+                  span {{v.time}} : {{v.content}}
+              a(target="_blank" :href="googleCalendar")
+                img(border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif")
             v-flex(md4 xs6)
               h2 場所
-              p 東京都渋谷区円山町19-1 渋谷プライムプラザ
+              p {{address}}
               |
-              a(href="https://www.cyberagent.co.jp/way/features/list/detail/id=13541" target="t_blank") @株式会社 サイバーエージェント CREATIVE Lounge
+              a(:href="companyLink" target="t_blank") @{{company}}
     v-layout(row wrap offset-sm3)
       v-flex(xs12 md6 offset-md3)
         iframe.map(
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.829864286873!2d139.69281761570687!3d35.656563180200095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55eb1712fb%3A0x956a31b833a23cfa!2z44CSMTUwLTAwNDQg5p2x5Lqs6YO95riL6LC35Yy65YaG5bGx55S677yR77yZ4oiS77yRIOa4i-iwt-ODl-ODqeOCpOODoOODl-ODqeOCtg!5e0!3m2!1sja!2sjp!4v1531467310753"
+          :src="googleMap"
           frameborder="0"
           style="width: 100% !important"
           )
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
     name: 'Contact',
     data () {
-      return {}
+      return {
+        nextDate: '',
+        dayOfWeek: '',
+        schedule: [],
+        address: '',
+        company: '',
+        companyLink: '',
+        googleMap: '',
+        googleCalendar: ''
+      }
+    },
+    mounted () {
+      axios.get('https://shinjuku-lt-backend.now.sh/next')
+        .then(response => {
+          const next = response.data
+          this.nextDate = `${next.nextTime.year}/${next.nextTime.month}/${next.nextTime.date}`
+          this.dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date(this.nextDate).getDay()]
+          this.schedule = next.schedule
+          this.address = next.place.address
+          this.company = next.place.company
+          this.companyLink = next.place.companyLink
+          this.googleMap = next.google.map
+          this.googleCalendar = next.google.calendar
+        })
     }
   }
 </script>
