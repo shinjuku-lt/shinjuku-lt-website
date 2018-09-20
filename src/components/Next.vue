@@ -54,8 +54,8 @@ div#head
           this.address = next.place.address
           this.company = next.place.company
           this.companyLink = next.place.companyLink
-          this.googleMap = `http://maps.google.co.jp/maps?q=${next.place.address}&output=embed&t=m&z=16&hl=ja`
-          this.googleCalendar = `https://calendar.google.com/calendar/r/eventedit?text=Shinjuku.LT&dates=${next.nextTime.year}${next.nextTime.month}${next.nextTime.date}T035000Z/${next.nextTime.year}${next.nextTime.month}${next.nextTime.date}T120000Z&location=${this.address}`
+          this.googleMap = next.google.map
+          this.googleCalendar = next.google.calendar
         })
     }
   }
