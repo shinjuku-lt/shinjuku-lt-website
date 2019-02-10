@@ -1,31 +1,28 @@
 <template lang="pug">
-div#head
-  v-container(fluid)
-    v-layout(row wrap)
-      v-flex(xs12 md6 offset-md4)
-        v-container(fluid)
-          v-layout(row wrap)
-            v-flex(md4 xs6)
-              h2 次回開催日
-              p {{nextDate}}
-              p {{dayOfWeek}}
-              ul(style="text-align:center")
-                li(v-for="(v, k) in schedule")
-                  span {{v.time}} : {{v.content}}
-              a(target="_blank" :href="googleCalendar")
-                img(border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif")
-            v-flex(md4 xs6)
-              h2 場所
-              p {{address}}
-              |
-              a(:href="companyLink" target="t_blank") @{{company}}
-    v-layout(row wrap offset-sm3)
-      v-flex(xs12 md6 offset-md3)
-        iframe.map(
-          :src="googleMap"
-          frameborder="0"
-          style="width: 100% !important"
-          )
+div#next
+  h2.top-title Next
+  div.contents
+    p 次回のShinkuju.LTの開催場所と日時です。
+    p ご都合をお合わせの上、ご参加ください。
+  div.contents
+    h3 日時
+    div.next_wrap
+      div.date {{nextDate}} （{{dayOfWeek}}）
+      div.time_wrap.clearfix(v-for="(v, k) in schedule")
+        p.time {{v.time}}：
+        p.content {{v.content}}
+      a(target="_blank" :href="googleCalendar")
+        <img src="../assets/google_calendar.svg">
+        | google カレンダー
+  div.contents
+    h3 日時
+    div.next_wrap
+      a.company(:href="companyLink" target="t_blank") @{{company}}
+      p {{address}}
+      iframe.map(
+        :src="googleMap"
+        frameborder="0"
+      )
 </template>
 
 <script>
@@ -62,22 +59,96 @@ div#head
 </script>
 
 <style scoped>
-h2 {
-  margin-bottom: 6px;
-  font-weight: bold;
-  font-size: 28px;
-  color: #3A507D;
+#next {
+  margin: 50px auto;
 }
-p {
-  margin: 0 0 0 0;
+#next h3 {
+  display: inline-block;
+  color: #333333;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  background: linear-gradient(transparent 60%, #ffff66 60%);
+  margin: 0 0 20px;
 }
-div.margin-bottom {
-  margin-bottom: 25px;
+#next .contents {
+  margin-top: 40px;
+  line-height: 1em;
+  font-weight: 700;
+}
+.next_wrap {
+  margin: 0 auto 40px;
+  width: 80%;
+  background: #F5F8FA;
+  padding: 36px 60px;
+  border-radius: 20px;
+}
+.next_wrap a img {
+  width: 40px;
+  margin: 20px 10px -10px;
+}
+.next_wrap .date {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 20px;
+}
+.time_wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.time_wrap .time {
+  text-align: right;
+  width: 50%;
+  float: left;
+}
+.time_wrap .content {
+  text-align: left;
+  width: 50%;
+  float: right;
+}
+.next_wrap .company {
+  font-size: 24px;
+  margin: 0 0 20px;
+  display: inline-block;
 }
 iframe.map {
-  width: 500px;
-  height: 400px;
+  width: 80%;
+  height: 460px;
   border: solid 1px;
-  border-color: #3A507D;
+  border-color: #333;
+  margin: 20px auto;
+}
+@media screen and (max-width: 750px) {
+  #next {
+    margin: 10px 20px 40px;
+  }
+  #next h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 10px;
+  }
+  #next .contents {
+    margin-top: 10px;
+  }
+  .next_wrap {
+    margin: 0 auto 20px;
+    width: 90%;
+    padding: 20px 20px 30px;
+  }
+  .next_wrap a img {
+    width: 30px;
+  }
+  .next_wrap .date {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  .next_wrap .company {
+    font-size: 18px;
+  }
+  iframe.map {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto 0; 
+  }
 }
 </style>

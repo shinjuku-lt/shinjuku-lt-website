@@ -1,64 +1,42 @@
 <template lang="pug">
   div#top
-    github
-    v-toolbar(height="auto" align-center style="width:101%")
-      v-layout(class="header")
-        v-flex
-          img.logo(src="../assets/shinjukuLT_logo.svg")
-          tab
-    v-flex(xs12)
-      main
-      router-view
+    div.header
+      div.flex
+        pageHeader
+    main
+      router-view(:authenticated="authenticated")
+    pageFooter(:auth="auth" :authenticated="authenticated")
 </template>
 
 <script>
-import tab from './Tab'
-import github from './Github'
+import pageHeader from './PageHeader'
+import pageFooter from './PageFooter'
 export default {
+  props: ['auth', 'authenticated'],
   name: 'Top',
   data () {
     return {}
   },
   components: {
-    tab, github
+    pageHeader, pageFooter
   }
 }
 </script>
 
-<style>
-@media screen and (max-width: 420px) {
-  .btn {
-    width: 50px;
-    height: 50px;
-    font-size: 8px;
-  }
-  .min-reset-container{
-    padding: 0 !important;
-  }
-  .slide-iframe{
-    padding: 0 !important;
-    width: 100% !important;
-  }
-  .logo {
-    width: 25%;
-    margin: 20px 0 0 0 !important;
-  }
-}
-</style>
-
 <style scoped>
 .header {
-  background: url(../assets/background.jpg) center no-repeat fixed;
+  height: 120px;
 }
-.layout.header{
-  margin: 0 !important;
+main, .header {
+  width: 1000px;
+  margin: 0 auto;
 }
-.logo {
-  width: 25%;
-  margin: 40px 0 0 0;
+@media screen and (max-width: 768px) {
+  .header {
+    height: 12vh;
+  }
+  main, .header {
+    width: 100%;
+  }
 }
-div.text-center {
-  color: #666;
-  margin: auto;
-}  
 </style>

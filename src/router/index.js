@@ -2,13 +2,16 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
 import AboutUs from '@/components/AboutUs'
+import Members from '@/components/Members'
 import Slides from '@/components/Slides'
 import Contact from '@/components/Contact'
 import Next from '@/components/Next'
+import Callback from '@/components/Callback'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -20,6 +23,11 @@ export default new Router({
           path: '/aboutus',
           name: 'AboutUs',
           component: AboutUs
+        },
+        {
+          path: '/members',
+          name: 'Members',
+          component: Members
         },
         {
           path: '/slides',
@@ -37,6 +45,13 @@ export default new Router({
           component: Next
         }
       ]
+    },
+    {
+      path: '/callback',
+      name: 'Callback',
+      component: Callback
     }
   ]
 })
+
+export default router
