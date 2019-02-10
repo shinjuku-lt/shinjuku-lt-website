@@ -16,8 +16,9 @@
       | 過去の ShinjukuLTで発表されたスライドです。
       br
       | 随時こちらにアップロードしていきます！
-    span {{ slideYMs }}
-    div.slides-year(v-for="(slide, index) in slides" :key="index") {{ slide.year }}
+    //- span {{ slideYMs }}
+    div.slides-year(v-for="slide in slideYMs") {{ slide.key }}
+    //- div.slides-year(v-for="(slide, index) in slides" :key="index") {{ slide.year }}
       div.slide-months
         div.slide-month.slide-month-disabled 12
         div.slide-month.slide-month-disabled 11
@@ -68,6 +69,7 @@ import axios from 'axios'
 let SLIDES = {}
 let slideYMs = []
 let defaultYM = slideYMs[slideYMs.length - 1]
+
 export default {
   props: ['authenticated'],
   name: 'Slides',
@@ -101,11 +103,10 @@ export default {
           })
           // 返却するパラメタ作成
           const year = yearMonth.substring(0, 4)
-          const month = parseInt(yearMonth.substring(4, 6)).toString
-          const monthSlides = hash(month, tmpSlides)
-          slideYMs.push(
-            hash(year, monthSlides)
-          )
+          const month = parseInt(yearMonth.substring(4, 6))
+          slideYMs.push({
+            [year]: {[month]: tmpSlides}
+          })
         }, SLIDES)
         this.slideYMs = slideYMs
       })
@@ -118,11 +119,6 @@ export default {
       this.selectShow = true
     }
   }
-}
-function hash(key, value) {
-  var h = {};
-  h[key] = value;
-  return h;
 }
 </script>
 
