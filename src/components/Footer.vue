@@ -1,27 +1,20 @@
 <template lang="pug">
-  div#top
-    // github
-    v-layout(class="header")
-      v-flex
-        pageHeader
-    v-flex(xs12)
-      div.logo
-      main
-        router-view
-      pageFooter
+  div#footer
+    v-toolbar(height="auto" align-center style="width:101%")
+      v-layout(class="header")
+        v-flex
+          tab
 </template>
 
 <script>
-import pageHeader from './PageHeader'
-import pageFooter from './PageFooter'
-import github from './Github'
+import tab from './Tab'
 export default {
   name: 'Top',
   data () {
     return {}
   },
   components: {
-    pageHeader, pageFooter, github
+    tab, github
   }
 }
 </script>
@@ -40,6 +33,10 @@ export default {
     padding: 0 !important;
     width: 100% !important;
   }
+//  .logo {
+//    width: 25%;
+//    margin: 20px 0 0 0 !important;
+//  }
 }
 </style>
 
@@ -53,16 +50,11 @@ export default {
   // margin: 0 !important;
 }
 .logo {
-  height: 380px;
-  background-image: url('../assets/main_visual.png');
-  background-size: 100%;
+  width: 25%;
+  margin: 40px 0 0 0;
 }
 div.text-center {
   color: #666;
   margin: auto;
 }  
-main, .header {
-  width: 1200px;
-  margin: 0 auto;
-}
 </style>

@@ -1,22 +1,32 @@
 export const TAB = [
   {
-    name: 'AboutUs',
+    name: 'Shinjuku.LT',
     path: '/aboutus',
-    style: 'border: #CA6B6D solid 3px; color: #CA6B6D;'
+    style: 'font-size: 22px; line-height: 31px; margin-left: 120px;'
+  },
+  {
+    name: 'Members',
+    path: '/members',
+    style: 'font-size: 22px; line-height: 31px; margin-left: 40px;'
   },
   {
     name: 'Slides',
     path: '/slides',
-    style: 'border: #AEBF50 solid 3px; color: #AEBF50;'
+    style: 'font-size: 22px; line-height: 31px; margin-left: 40px;'
   },
   {
     name: 'Contact',
     path: '/contact',
-    style: 'border: #77B4B8 solid 3px; color: #77B4B8;'
+    style: 'font-size: 22px; line-height: 31px; margin-left: 40px;'
   },
   {
     name: 'Next',
     path: '/next',
-    style: 'border: #3A507D solid 3px; color: #3A507D'
+    style: 'font-size: 22px; line-height: 31px; margin-left: 40px;'
+  },
+  {
+    name: 'PodCast',
+    path: '/podcast',
+    style: 'font-size: 22px; line-height: 31px; margin-left: 40px; margin-right: 120px;'
   }
 ]

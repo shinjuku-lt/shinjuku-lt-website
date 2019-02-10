@@ -13,19 +13,20 @@ export default {
 
 <style>
 #app {
-  font-family: 'Rounded Mplus 1c', Helvetica, Arial, mplus-1p-regular, sans-serif;
+  font-family: 'Rounded Mplus 2c', Helvetica, Arial, mplus-1p-regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-
   position: relative;
   background-size: cover;
+  font-size: 18px;
+  color: #333333;
+  margin: 0 auto;
 }
 
 main {
-  font-family: "Rounded Mplus 1c";
-  color: #666;
-  width: 960px;
+  font-family: "Rounded Mplus 2c";
+  color: #666;  
   margin: auto;
 }
 
@@ -52,6 +53,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -75,5 +77,13 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a::hover{
+  text-decoration: none;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
 }
 </style>

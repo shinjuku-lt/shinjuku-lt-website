@@ -22,6 +22,11 @@ export default new Router({
           component: AboutUs
         },
         {
+          path: '/members',
+          name: 'Members',
+          component: AboutUs
+        },
+        {
           path: '/slides',
           name: 'Slides',
           component: Slides
