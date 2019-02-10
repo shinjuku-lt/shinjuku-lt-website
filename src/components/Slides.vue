@@ -16,11 +16,12 @@
       | 過去の ShinjukuLTで発表されたスライドです。
       br
       | 随時こちらにアップロードしていきます！
-    div.slides-year(v-for="slides, year in slideYMs") {{ year }}
+    // 年月の降順出力
+    div.slides-year(v-for="year in Object.keys(slideYMs).reverse()") {{ year }}
       div.slide-months
-        div.slide-month(v-for="month in 12" :class=" Object.keys(slides).includes(month.toString())? '' : 'slide-month-disabled'" @click="selectYearMonth(year, month)") {{ month }}
+        div.slide-month(v-for="month in 12" :class="{'slide-month-disabled': !Object.keys(slideYMs[year]).includes(month.toString()), 'slide-month-active': selectedYearMonth[year][month]}" @click="Object.keys(slideYMs[year]).includes(month.toString())? selectYearMonth(year, month): ''") {{ ('00' + month).slice(-2) }}
       div.slide-previews(v-for="month in 12" v-if="selectedYearMonth[year][month]")
-        div.slide-preview(v-for="slide in slides[month]")
+        div.slide-preview(v-for="slide in slideYMs[year][month]")
           iframe(:src="slide.page.url")
 </template>
 
@@ -49,7 +50,6 @@ export default {
       .then(response => {
         SLIDES = response.data
         slideYMs = {}
-        // SLIDES.forEach(function (slides, yearMonth) {
         for (var yearMonth in SLIDES) {
           // 返却するパラメタ作成
           const year = yearMonth.substring(0, 4)
@@ -58,32 +58,20 @@ export default {
             slideYMs[year] = {}
           }
           slideYMs[year][month] = SLIDES[yearMonth]
-          this.selectedYearMonth[year] = {}
-
-          // console.log(yearMonth)
-          // let tmpSlides = []
-          // 年月別のスライド集約
-          // SLIDES[yearMonth].forEach(function (slide) {
-          //   tmpSlides.push({
-          //     type: slide.type,
-          //     presenter: slide.presenter,
-          //     url: slide.page.url,
-          //     width: slide.page.width,
-          //     height: slide.page.height
-          //   })
-          // })
-          // すでに生成済みの月の年月の場合
-          // if (Object.keys(slideYMs).includes(year)) {
-          //   slideYMs[year].push({[month]: tmpSlides})
-          // } else {
-          //   slideYMs.push({
-          //     [year]: {[month]: tmpSlides}
-          //   })
-          // }
-        // }, SLIDES)
+          if (!this.selectedYearMonth[year]) {
+            this.selectedYearMonth[year] = {}
+            this.selectedYearMonth[year][month] = true
+          }
         }
-        this.slideYMs = slideYMs
-        // console.log(this.slideYMs)
+        var keys = []
+        var newHash = {}
+        for (var k in slideYMs) { keys.push(k) }
+        keys.reverse()
+        var length = keys.length
+        for (var i = 0; i < length; i++) {
+          newHash[keys[i]] = slideYMs[keys[i]]
+        }
+        this.slideYMs = newHash
       })
   },
   methods: {
@@ -92,7 +80,6 @@ export default {
       hoge[year] = {}
       hoge[year][month] = true
       this.selectedYearMonth = hoge
-      console.log(this.selectedYearMonth)
     }
   }
 }
@@ -154,17 +141,17 @@ export default {
 .slide-month-active {
   content: '';
   background-color: #cccccc;
+  display: inline-block;
   height: 1.5em;
   width: 2em;
   margin-left: -5px;
-  position: absolute;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
 .slide-month-disabled {
   color: #CCCCCC;
-  cursor: none;
+  cursor: default;
 }
 .slide-month:nth-child(n+2){
   margin-left: 20px;
@@ -178,14 +165,14 @@ export default {
   display: inline-flex;
 }
 .slide-preview > iframe {
-  width: 360px;
-  height: 260px;
+  width: 300px;
+  height: 216px;
 }
 .slide-preview:nth-child(n + 4) {
   margin-top: 50px;
 }
 .slide-preview:nth-child(3n + 2) {
-  margin-right: 60px;
-  margin-left:  60px;
+  margin-right: 50px;
+  margin-left:  50px;
 }
 </style>
