@@ -26,7 +26,6 @@ export default {
     if (auth.getAuthenticatedFlag() === true) {
       auth.renewSession()
     }
-    console.log('auth:', auth, 'this.auth:', this.auth)
   }
 }
 </script>
