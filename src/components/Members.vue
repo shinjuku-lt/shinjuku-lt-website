@@ -104,7 +104,7 @@
 }
 @media screen and (max-width: 750px) {
   #members {
-    margin: 10px 20px 30px;
+    margin: 10px 20px 40px;
   }
   .members-message {
     margin-top: 10px;
@@ -119,58 +119,30 @@
     box-sizing: content-box;
   }
   .member-items {
-    margin-top: 95px;
-    padding-bottom: 65px;
-    background-color: #F5F8FA;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
   }
   .member-item {
-    display: inline-flex;
-    width: 33%;
-    height: 454px;
-    position: relative;
-    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
   }
   .member-item > * {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     line-height: 22px;
   }
-  .member-icon {
-    width: 220px;
-    height: 220px;
-    position: absolute;
-    left: 50%;
-    top: 60px;
-  }
   .member-icon-circle {
-    width: 220px;
-    height: 220px;
-    position: relative;
-    top: 61px;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-  }
-  .member-position-top {
-    position: relative;
-    top: 50px;
+    width: 20vh;
+    height: 20vh;
+    top: 30px;
   }
   .member-name {
-    margin-top: 70px;
-    font-size: 18px;
-    font-weight: 900;
-  }
-  .member-account a{
-    color: #6CC7FF;
-    font-weight: 900;
+    margin-top: 40px;
+    font-size: 15px;
   }
   .member-job, .member-skill, .member-comment{
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
   }
 }
 </style>

@@ -118,4 +118,59 @@ iframe.map {
   border-color: #333;
   margin: 20px auto;
 }
+@media screen and (max-width: 750px) {
+  #next {
+    margin: 10px 20px 40px;
+  }
+  #next h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 10px;
+  }
+  #next .contents {
+    margin-top: 10px;
+  }
+  .next_wrap {
+    margin: 0 auto 40px;
+    width: 80%;
+    background: #F5F8FA;
+    padding: 36px 60px;
+    border-radius: 20px;
+  }
+  .next_wrap a img {
+    width: 40px;
+    margin: 20px 10px -10px;
+  }
+  .next_wrap .date {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0 0 20px;
+  }
+  .time_wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .time_wrap .time {
+    text-align: right;
+    width: 50%;
+    float: left;
+  }
+  .time_wrap .content {
+    text-align: left;
+    width: 50%;
+    float: right;
+  }
+  .next_wrap .company {
+    font-size: 24px;
+    margin: 0 0 20px;
+    display: inline-block;
+  }
+  iframe.map {
+    width: 80%;
+    height: 460px;
+    border: solid 1px;
+    border-color: #333;
+    margin: 20px auto;
+  }
+}
 </style>
