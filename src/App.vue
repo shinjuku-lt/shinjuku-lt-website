@@ -1,12 +1,31 @@
 <template lang="pug">
   div#app
-    router-view
+    router-view(:auth="auth" :authenticated="authenticated")
 </template>
 
 <script>
+import AuthService from './auth/AuthService'
+
+const auth = new AuthService()
+
 export default {
   mounted () {
     parent.document.title = 'Shinjuku.LT'
+  },
+  data () {
+    return {
+      auth,
+      authenticated: auth.authenticated,
+      res: 'here is response'
+    }
+  },
+  created () {
+    auth.authNotifier.on('authChange', authState => {
+      this.authenticated = authState.authenticated
+    })
+    if (auth.getAuthenticatedFlag() === true) {
+      auth.renewSession()
+    }
   }
 }
 </script>
@@ -26,11 +45,11 @@ export default {
 
 main {
   font-family: "Rounded Mplus 1c";
-  color: #666;  
+  color: #666;
   margin: auto;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -43,8 +62,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -56,7 +75,7 @@ time, mark, audio, video {
   text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -67,7 +86,7 @@ ol, ul {
   list-style: none;
 }
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; 
+  margin: 0;
 }
 blockquote, q {
   quotes: none;

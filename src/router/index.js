@@ -6,10 +6,12 @@ import Members from '@/components/Members'
 import Slides from '@/components/Slides'
 import Contact from '@/components/Contact'
 import Next from '@/components/Next'
+import Callback from '@/components/Callback'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -43,6 +45,13 @@ export default new Router({
           component: Next
         }
       ]
+    },
+    {
+      path: '/callback',
+      name: 'Callback',
+      component: Callback
     }
   ]
 })
+
+export default router
