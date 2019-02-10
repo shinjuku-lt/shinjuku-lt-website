@@ -18,15 +18,6 @@ export const MEMBERS = [
     'image': 'mustumi.jpg'
   },
   {
-    'name': '金岡 勇佑',
-    'account_name': '@8140i2865_3',
-    'account_url': 'https://twitter.com/8140i2865_3',
-    'job': 'プログラマ',
-    'skill': 'PHP',
-    'comment': '僕はPHPerです',
-    'image': 'kanaoka.jpg'
-  },
-  {
     'name': 'disc99',
     'account_name': 'disc99',
     'account_url': 'https://twitter.com/disc99_',
@@ -63,6 +54,15 @@ export const MEMBERS = [
     'image': 'to4iki.jpg'
   },
   {
+    'name': '高野　大',
+    'account_name': 'ftsan',
+    'account_url': 'https://twitter.com/futesi_nebusoku',
+    'job': 'エンジニア',
+    'skill': 'Java, Kotlin, SQLが好きです',
+    'comment': '最近の悩みは、仕事中に普通に雑談してるだけで怒られることです',
+    'image': 'ftsan.jpg'
+  },
+  {
     'name': 'tkt_horikoshi',
     'account_name': '@tkt_horikoshi',
     'account_url': 'https://twitter.com/tkt_horikoshi',
@@ -72,6 +72,15 @@ export const MEMBERS = [
     'image': 'horikoshi.jpg'
   },
   {
+    'name': '金岡 勇佑',
+    'account_name': '@8140i2865_3',
+    'account_url': 'https://twitter.com/8140i2865_3',
+    'job': 'プログラマ',
+    'skill': 'PHP',
+    'comment': '僕はPHPerです',
+    'image': 'kanaoka.jpg'
+  },
+  {
     'name': '丸山 ひかる',
     'account_name': 'maruyamahiakru',
     'account_url': 'https://twitter.com/maruyamahiakru',
@@ -79,15 +88,6 @@ export const MEMBERS = [
     'skill': 'Ruby, NodeJS, AWS',
     'comment': '趣味は焚き火です。よろしくお願いします！',
     'image': 'maruyama.jpg'
-  },
-  {
-    'name': '高野　大',
-    'account_name': 'ftsan',
-    'account_url': 'https://twitter.com/futesi_nebusoku',
-    'job': 'エンジニア',
-    'skill': 'Java, Kotlin, SQLが好きです',
-    'comment': '最近の悩みは、仕事中に普通に雑談してるだけで怒られることです',
-    'image': 'ftsan.jpg'
   },
   {
     'name': 'しも',
