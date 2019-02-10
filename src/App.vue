@@ -13,7 +13,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Rounded Mplus 2c', Helvetica, Arial, mplus-1p-regular, sans-serif;
+  font-family: 'Rounded Mplus 1c', Helvetica, Arial, mplus-1p-regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -25,7 +25,7 @@ export default {
 }
 
 main {
-  font-family: "Rounded Mplus 2c";
+  font-family: "Rounded Mplus 1c";
   color: #666;  
   margin: auto;
 }
@@ -66,6 +66,9 @@ body {
 ol, ul {
   list-style: none;
 }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; 
+}
 blockquote, q {
   quotes: none;
 }
@@ -85,5 +88,8 @@ a::hover{
   content: "";
   display: block;
   clear: both;
+}
+p {
+  line-height: 30px;
 }
 </style>

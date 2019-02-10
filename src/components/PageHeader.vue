@@ -15,8 +15,8 @@ div#pageHeader
       li.header_menu
         <router-link to="/next">Next</router-link>
       li.header_menu
-        a(href="/podcast" target="_blank") PodCast
-          | <i class="fas fa-external-link-alt"></i>
+        a(href="https://shinjuku-lt.github.io/" target="_blank") PodCast
+        | <i class="fas fa-external-link-alt"></i>
 </template>
 
 <script>

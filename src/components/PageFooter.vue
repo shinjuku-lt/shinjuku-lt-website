@@ -3,9 +3,9 @@
     div.footer_logo
       | <img src="../assets/logo_white.svg">
     div.sns_area
-      div.fb_btn
-        a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-twitter"></i>
       div.tw_btn
+        a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-twitter"></i>
+      div.ig_btn
         a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-instagram"></i>
     ul.footer_nav
       li.footer_menu
@@ -56,7 +56,7 @@ export default {
 .sns_area a {
   display: block;
 }
-.fb_btn, .tw_btn {
+.tw_btn, .ig_btn {
   background: #FFF;
   width: 60px;
   height: 60px;
@@ -64,7 +64,7 @@ export default {
   float: left;
   margin: 0 10px;
 }
-.fb_btn i, .tw_btn i {
+.tw_btn i, .ig_btn i {
   color: #333;
   line-height: 60px;
 }
