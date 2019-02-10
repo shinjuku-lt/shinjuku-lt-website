@@ -20,7 +20,7 @@
         a(href="https://shinjuku-lt.github.io/" target="_blank") PodCast
           | <i class="fas fa-external-link-alt"></i>
       li.footer_menu
-        a(href="/") Member Login
+        a.login(@click="login()") Member Login
     // v-toolbar(height="auto" align-center style="width:101%")
     //  v-layout(class="header")
     //    v-flex
@@ -28,14 +28,35 @@
 
 <script>
 import pageHeader from './PageHeader'
-import github from './Github'
+
 export default {
-  name: 'Top',
-  data () {
-    return {}
-  },
+  props: ['auth', 'authenticated'],
   components: {
-    pageHeader, github
+    pageHeader
+  },
+  name: 'Top',
+  methods: {
+    requestApi (endpoint) {
+      const header = this.authenticated ? { 'Authorization': 'Bearer ' + this.auth.idToken, 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' } : {}
+      this.$http({
+        headers: header,
+        params: {},
+        url: 'http://localhost:3010/api/' + endpoint,
+        method: 'GET'
+      }).then(response => {
+        this.res = response.body.message
+        console.log(response)
+      }).catch(response => {
+        this.res = response.statusText
+        console.log(response)
+      })
+    },
+    login () {
+      this.auth.login()
+    },
+    logout () {
+      this.auth.logout()
+    }
   }
 }
 </script>
@@ -60,7 +81,7 @@ export default {
   background: #FFF;
   width: 60px;
   height: 60px;
-  border-radius: 40px; 
+  border-radius: 40px;
   float: left;
   margin: 0 10px;
 }
@@ -69,8 +90,8 @@ export default {
   line-height: 60px;
 }
 .footer_nav {
-} 
-.footer_menu {  
+}
+.footer_menu {
   display: inline-block;
   font-size: 16px;
   line-height: 10px;
@@ -86,6 +107,9 @@ export default {
   color: #FFF;
 }
 .footer_menu a i {
-  margin: 0 0 0 4px;  
+  margin: 0 0 0 4px;
+}
+.login {
+  cursor: pointer;
 }
 </style>

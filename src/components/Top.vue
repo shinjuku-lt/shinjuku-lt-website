@@ -8,7 +8,7 @@
       div.logo
       main
         router-view
-      pageFooter
+      pageFooter(:auth="auth" :authenticated="authenticated")
 </template>
 
 <script>
@@ -16,6 +16,7 @@ import pageHeader from './PageHeader'
 import pageFooter from './PageFooter'
 import github from './Github'
 export default {
+  props: ['auth', 'authenticated'],
   name: 'Top',
   data () {
     return {}
@@ -46,7 +47,7 @@ export default {
 <style scoped>
 .header {
   height: 120px;
-  
+
   // background: url(../assets/background.jpg) center no-repeat fixed;
 }
 .layout.header{
@@ -60,7 +61,7 @@ export default {
 div.text-center {
   color: #666;
   margin: auto;
-}  
+}
 main, .header {
   width: 1200px;
   margin: 0 auto;
