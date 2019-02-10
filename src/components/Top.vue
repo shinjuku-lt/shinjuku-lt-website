@@ -1,11 +1,9 @@
 <template lang="pug">
   div#top
     // github
-    v-layout(class="header")
-      v-flex
+    div.header
+      div.flex
         pageHeader
-    v-flex(xs12)
-      div.logo
       main
         router-view
       pageFooter(:auth="auth" :authenticated="authenticated")
@@ -52,11 +50,6 @@ export default {
 }
 .layout.header{
   // margin: 0 !important;
-}
-.logo {
-  height: 380px;
-  background-image: url('../assets/main_visual.png');
-  background-size: 100%;
 }
 div.text-center {
   color: #666;

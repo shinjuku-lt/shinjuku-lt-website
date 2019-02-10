@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
 import AboutUs from '@/components/AboutUs'
+import Members from '@/components/Members'
 import Slides from '@/components/Slides'
 import Contact from '@/components/Contact'
 import Next from '@/components/Next'
@@ -26,7 +27,7 @@ const router = new Router({
         {
           path: '/members',
           name: 'Members',
-          component: AboutUs
+          component: Members
         },
         {
           path: '/slides',

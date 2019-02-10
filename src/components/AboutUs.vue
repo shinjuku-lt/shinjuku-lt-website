@@ -1,5 +1,6 @@
 <template lang="pug">
 div#aboutus
+  div.top-logo
   div.about
     h2.top-title ABOUT
     div.about-message
@@ -59,7 +60,8 @@ div#aboutus
         p
           | 性別、年齢、出身地、やってる仕事、使っている言語など…、
         p
-          | いろんな人がいて、垣根がないサークルを作れる勉強会を目指しています。
+          span.highlight
+            |いろんな人がいて、垣根がないサークルを作れる勉強会を目指しています。
 </template>
 
 <script>
@@ -92,10 +94,21 @@ p {
 p.italic {
   font-style: italic;
 }
+.full-width {
+  margin-left: -200%;
+  margin-right: -200%;
+  padding: 0 200%;
+  width: 1200px;  
+  box-sizing: content-box;
+}
+.top-logo {
+  height: 320px;
+  background-image: url('../assets/main_visual.png');
+  background-size: 100%;
+}
 div.margin-bottom {
   margin-bottom: 25px;
 }
-
 .about, .vision, .logo {
   margin-top: 80px;
 }
@@ -107,6 +120,7 @@ div.margin-bottom {
   font-weight: 900;
   padding-bottom: 10px;
   letter-spacing: 1.2px;
+  margin: 0px;
 }
 .top-title:before {
   content: '';
@@ -122,7 +136,7 @@ div.margin-bottom {
 }
 .about-message {
   line-height: 2em;
-  font-weight: 900;
+  font-weight: 600;
 }
 .highlight {
   display: inline-block;
@@ -195,7 +209,7 @@ div.margin-bottom {
 }
 
 .logo {
-  margin: 0 0 40px;
+  margin: 80px 0 140px;
   overflow: auto;
 }
 .logo-wrap {
@@ -210,22 +224,25 @@ div.margin-bottom {
   width: 80%;
 }
 .logo-message {
-  width: 55%;
+  width: 52%;
   float: right;
-  padding: 0 0 0 20px;
   text-align: left;
   line-height: 2em;
-  font-weight: 900;
 }
 .logo-message h3 {
   font-size: 24px;
   font-weight: bold;
-  margin: 00
+  margin: 0;
+  font-weight: 900;
+}
+.logo-message p {
+  font-weight: 600;
+  margin-top: 15px;
 }
 .quote {
   background: #F8F7F7;
-  padding: 20px;
-  margin: 10px 0 20px;
+  padding: 18px;
+  margin: 15px 0 30px;
   border-radius: 10px;
   text-align: center;
   position: relative;
@@ -248,6 +265,6 @@ div.margin-bottom {
 }
 .quote p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 26px;
 }
 </style>

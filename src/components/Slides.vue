@@ -1,33 +1,58 @@
 <template lang="pug">
-div#slides(data-app="true")
-  v-container(fluid)
-    v-layout(row wrap offset-sm3)
-      v-flex(xs12)
-        v-card(flat)
-          h2.tabtitle 発表内容について
-          div.margin-bottom
-            v-flex(xs12 sm6 offset-sm3 md4 offset-md4)
-              p
-                b 垣根がないサークルを作れる勉強会を目指しています
-              | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など発表内容について制限はありません。
-              p LTといえば基本的に5分ですが、ShinjukuLTでは5分の制限も設けておりません。そのためボリューミーなスライドもございます。
-      v-flex(xs12)
-        v-card(flat)
-          h2.tabtitle スライド
-          div.margin-bottom
-            p 過去の ShinjukuLTで発表されたスライドです。
-            | 随時こちらにアップロードしていきます！
-      v-flex(xs11 sm4  offset-sm4)
-        v-select(label="開催年月を選択" :items="slideYMs" v-show="selectShow" v-model="selected" prepend-icon="map" hint="選択すると、対象月に発表されたスライドが閲覧できます。")
-    v-container(fluid grid-list-lg class="min-reset-container")
-      v-layout()
-        v-flex(lg10 offset-lg1 md12 sm12 xs12)
-            v-container(style="padding:0;")
-              v-layout(row wrap)
-                v-flex(lg4 md6 sm12 v-for="(slide, index) in slides" :key="index")
-                  v-card(flat)
-                    iframe(:src='slide.page.url' :height='slide.page.height' class="slide-iframe")
-                    p {{slide.auther}}
+  div#slides
+    h2.top-title Slides
+    div.slides-message
+      | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など
+      br
+      | 発表内容について制限はありません。 
+      br
+      | LTといえば基本的に5分ですが、 
+      br
+      | ShinjukuLTでは5分の制限も設けておりません。
+      br
+      | そのためボリューミーなスライドもございます。
+      br
+      br
+      | 過去の ShinjukuLTで発表されたスライドです。
+      br
+      | 随時こちらにアップロードしていきます！
+    div.slides-year 2019
+    div.slide-months
+      div.slide-month 12
+      div.slide-month 11
+      div.slide-month 10
+      div.slide-month 9
+      div.slide-month 8
+      div.slide-month 7
+      div.slide-month 6
+      div.slide-month 5
+      div.slide-month 4
+      div.slide-month 3
+      div.slide-month 2
+      div.slide-month 1    
+    div.slide-previews
+      div.slide-preview
+      div.slide-preview
+      div.slide-preview
+      div.slide-preview
+      div.slide-preview
+
+    div.slides-year 2018
+    div.slide-months
+      div.slide-month 12
+      div.slide-month 11
+      div.slide-month 10
+      div.slide-month 9
+      div.slide-month 8
+      div.slide-month 7
+      div.slide-month 6
+      div.slide-month 5
+      div.slide-month 4
+      div.slide-month 3
+      div.slide-month 2
+      div.slide-month 1
+    div.slide-previews
+      div.slide-preview
 </template>
 
 <script>
@@ -73,23 +98,75 @@ export default {
 </script>
 
 <style>
-h2.tabtitle {
-  margin-bottom: 6px;
-  font-weight: bold;
-  font-size: 28px;
-  color: #aebf50;
+#slides {
+  margin-top: 50px;
 }
-
-div.margin-bottom {
-  margin-bottom: 25px;
+.top-title {
+  display: inline-block;
+  position: relative;
+  color: #333333;
+  font-size: 32px;
+  font-weight: 900;
+  padding-bottom: 10px;
+  letter-spacing: 1.2px;
+  margin: 0px;
 }
-
-menu > .menuable__content__active {
-  position: sticky !important;
+.top-title:before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: calc((100% - 20px)/2);
+  width: 20px;
+  height: 4px;
+  background-color: #DDDDDD;
 }
-
-.menu > .menu__content {
-  position: sticky !important;
+.slides-message {
+  margin-top: 40px;
+  line-height: 2em;
+  font-weight: 600;
+}
+.slides-year {
+  font-size: 22px;
+  font-weight: 900;
+  text-align: left;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 8px;
+  margin-top: 50px;
+}
+.slides-year:last-child {
+  margin-bottom: 50px;
+}
+.slide-months {
+  margin-top: 26px;
+  text-align: left;
+}
+.slide-month {
+  font-size: 20px;
+  font-weight: 900;
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+  text-align: center;
+}
+.slide-month:nth-child(n+2){
+  margin-left: 20px;
+}
+.slide-previews {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.slide-preview {
+  width: 360px;
+  height: 260px;
+  background-color: #e3e3e3;
+  display: inline-flex;
+}
+.slide-preview:nth-child(n + 4) {
+  margin-top: 50px;
+}
+.slide-preview:nth-child(3n + 2) {
+  margin-right: 60px;
+  margin-left:  60px;
 }
 </style>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
