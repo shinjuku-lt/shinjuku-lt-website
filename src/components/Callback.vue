@@ -6,7 +6,6 @@
     name: 'callback',
     props: ['auth'],
     created () {
-      console.log('callback desu')
       this.auth.handleAuthentication()
     }
   }
