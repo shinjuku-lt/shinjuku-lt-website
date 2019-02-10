@@ -4,9 +4,9 @@
     div.header
       div.flex
         pageHeader
-      main
-        router-view
-      pageFooter(:auth="auth" :authenticated="authenticated")
+    main
+      router-view
+    pageFooter(:auth="auth" :authenticated="authenticated")
 </template>
 
 <script>

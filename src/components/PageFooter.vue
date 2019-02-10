@@ -38,21 +38,6 @@ export default {
   },
   name: 'Top',
   methods: {
-    requestApi (endpoint) {
-      const header = this.authenticated ? { 'Authorization': 'Bearer ' + this.auth.idToken, 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' } : {}
-      this.$http({
-        headers: header,
-        params: {},
-        url: 'http://localhost:3010/api/' + endpoint,
-        method: 'GET'
-      }).then(response => {
-        this.res = response.body.message
-        console.log(response)
-      }).catch(response => {
-        this.res = response.statusText
-        console.log(response)
-      })
-    },
     login () {
       this.auth.login()
     },
@@ -79,7 +64,7 @@ export default {
 .sns_area a {
   display: block;
 }
-.fb_btn, .tw_btn {
+.tw_btn, .ig_btn {
   background: #FFF;
   width: 60px;
   height: 60px;
@@ -87,7 +72,7 @@ export default {
   float: left;
   margin: 0 10px;
 }
-.fb_btn i, .tw_btn i {
+.tw_btn i, .ig_btn i {
   color: #333;
   line-height: 60px;
 }
