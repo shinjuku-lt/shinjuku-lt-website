@@ -4,9 +4,9 @@
     div.slides-message
       | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など
       br
-      | 発表内容について制限はありません。 
+      | 発表内容について制限はありません。
       br
-      | LTといえば基本的に5分ですが、 
+      | LTといえば基本的に5分ですが、
       br
       | ShinjukuLTでは5分の制限も設けておりません。
       br
@@ -29,7 +29,7 @@
       div.slide-month 4
       div.slide-month 3
       div.slide-month 2
-      div.slide-month 1    
+      div.slide-month 1
     div.slide-previews
       div.slide-preview
       div.slide-preview
@@ -61,6 +61,7 @@ let SLIDES = {}
 let slideYMs = []
 let defaultYM = slideYMs[slideYMs.length - 1]
 export default {
+  props: ['authenticated'],
   name: 'Slides',
   data () {
     return {
@@ -73,7 +74,8 @@ export default {
     }
   },
   mounted () {
-    axios.get('https://shinjuku-lt-backend.now.sh/slide')
+    const header = this.authenticated ? {'headers': {'Authorization': 'Bearer ' + localStorage.getItem('idToken')}} : {}
+    axios.get('https://shinjuku-lt-backend.now.sh/slide', header)
       .then(response => {
         SLIDES = response.data
         slideYMs = []
