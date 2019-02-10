@@ -1,17 +1,17 @@
 <template lang="pug">
 div#contact
-  h2 CONTACT
+  h2.top-title Contact
   div.contents
     h3 ご参加方法
-    p Shinjuku.LTは現在、会場の兼ね合いでconnpass等の外部サイトでの参加募集は行っておりません。 
+    p Shinjuku.LTは現在、会場の兼ね合いでconnpass等の外部サイトでの参加募集は行っておりません。
     p 興味を持っていただいた方や、
     p ご質問などはお手数ですが、Shinjuku.LTのTwitterにて一度ご連絡頂ければと思います。
     p お気軽にご連絡ください！
     a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") @Shinjuku_LT
   div.contents
     h3 応募条件
-    p 参加条件等は特にございません。 
-    P 現在の参加メンバーはエンジニアが多いですが、 
+    p 参加条件等は特にございません。
+    P 現在の参加メンバーはエンジニアが多いですが、
     P デザイナー、マーケター、ディレクター、ライター、etc…
     p 様々な方のご参加をお持ちしております。
     p 複数人での参加も歓迎致します。
@@ -35,7 +35,7 @@ div#contact
           div.contents
   div.contents
     h3 開催場所と日時
-    p 開催場所はと日時は、 
+    p 開催場所はと日時は、
     p 月によって変わりますので
       <router-link to="/next">Next</router-link>
       | のページからご確認ください。
@@ -56,24 +56,6 @@ export default {
 #contact {
   margin: 50px auto;
 }
-#contact h2 {
-  position: relative;
-  color: #333333;
-  font-size: 32px;
-  font-weight: 700;
-  padding-bottom: 10px;
-  letter-spacing: 1.2px;
-  margin: 0 0 30px;
-}
-#contact h2:before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: calc((100% - 20px)/2);
-  width: 20px;
-  height: 4px;
-  background-color: #DDDDDD;
-}
 #contact h3 {
   display: inline-block;
   color: #333333;
@@ -87,10 +69,6 @@ export default {
   margin-top: 40px;
   line-height: 1em;
   font-weight: 700;
-}
-#contact .contents a {
-  color: #7CC7F5;
-  font-weight: 900;
 }
 .sns_area {
   display: inline-block;

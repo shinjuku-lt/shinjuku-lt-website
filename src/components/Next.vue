@@ -1,6 +1,6 @@
 <template lang="pug">
 div#next
-  h2 NEXT
+  h2.top-title Next
   div.contents
     p 次回のShinkuju.LTの開催場所と日時です。
     p ご都合をお合わせの上、ご参加ください。
@@ -62,24 +62,6 @@ div#next
 #next {
   margin: 50px auto;
 }
-#next h2 {
-  position: relative;
-  color: #333333;
-  font-size: 32px;
-  font-weight: 700;
-  padding-bottom: 10px;
-  letter-spacing: 1.2px;
-  margin: 0 0 30px;
-}
-#next h2:before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: calc((100% - 20px)/2);
-  width: 20px;
-  height: 4px;
-  background-color: #DDDDDD;
-}
 #next h3 {
   display: inline-block;
   color: #333333;
@@ -93,10 +75,6 @@ div#next
   margin-top: 40px;
   line-height: 1em;
   font-weight: 700;
-}
-#next .contents a {
-  color: #7CC7F5;
-  font-weight: 900;
 }
 .next_wrap {
   margin: 0 auto 40px;

@@ -72,8 +72,6 @@ export default {
   color: #333;
   line-height: 60px;
 }
-.footer_nav {
-}
 .footer_menu {
   display: inline-block;
   font-size: 16px;
@@ -94,5 +92,43 @@ export default {
 }
 .login {
   cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  #footer {
+    padding: 30px 20px 0;
+  }
+  .footer_logo {
+    width: 40%;
+    margin: 0 auto 10px
+  }
+  .sns_area {
+    margin: 0 0 20px;
+  }
+  .tw_btn, .ig_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+  }
+  .tw_btn i, .ig_btn i {
+    font-size: 18px;
+    line-height: 50px;
+  }
+  .footer_nav {
+    border-top: solid 1px #fff;
+    padding: 20px 0;
+  }
+  .footer_menu {
+    font-size: 12px;
+    line-height: 10px;
+    padding: 0 9px;
+    margin: 0 0 14px;
+  }
+  .footer_menu:first-child {
+    border-left: none;
+  }
+  .footer_menu:last-child {
+    border-left: none;
+    display: block;
+  }
 }
 </style>

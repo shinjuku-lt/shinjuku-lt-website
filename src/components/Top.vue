@@ -33,7 +33,7 @@ main, .header {
 }
 @media screen and (max-width: 768px) {
   .header {
-    height: 120px;
+    height: 12vh;
   }
   main, .header {
     width: 100%;
