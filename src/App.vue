@@ -23,8 +23,7 @@ export default {
     auth.authNotifier.on('authChange', authState => {
       this.authenticated = authState.authenticated
     })
-
-    if (auth.getAuthenticatedFlag() === 'true') {
+    if (auth.getAuthenticatedFlag() === true) {
       auth.renewSession()
     }
     console.log('auth:', auth, 'this.auth:', this.auth)

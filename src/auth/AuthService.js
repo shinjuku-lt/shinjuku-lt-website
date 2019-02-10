@@ -23,14 +23,11 @@ export default class AuthService {
   }
 
   handleAuthentication () {
-    console.log('ccc')
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
-        console.log('aaa')
         router.replace('AboutUs')
       } else if (err) {
-        console.log('bbb')
         router.replace('AboutUs')
         console.log(err)
       }
@@ -44,7 +41,9 @@ export default class AuthService {
 
     this.authNotifier.emit('authChange', { authenticated: true })
 
-    localStorage.setItem('loggedIn', true)
+    localStorage.setItem('accessToken', this.accessToken)
+    localStorage.setItem('idToken', this.idToken)
+    localStorage.setItem('expiresAt', this.expiresAt)
   }
 
   renewSession () {
@@ -67,17 +66,19 @@ export default class AuthService {
     this.userProfile = null
     this.authNotifier.emit('authChange', false)
 
-    localStorage.removeItem('loggedIn')
+    localStorage.removeItem('accessToken')
+    localStorage.removeItem('idToken')
+    localStorage.removeItem('expiresAt')
 
     // navigate to the home route
-    router.replace('home')
+    router.replace('AboutUs')
   }
 
   getAuthenticatedFlag () {
-    return localStorage.getItem('loggedIn')
+    return localStorage.getItem('accessToken') !== null
   }
 
   isAuthenticated () {
-    return new Date().getTime() < this.expiresAt && this.getAuthenticatedFlag() === 'true'
+    return new Date().getTime() < new Date(parseInt(localStorage.getItem('expiresAt'))) && this.getAuthenticatedFlag() === true
   }
 }

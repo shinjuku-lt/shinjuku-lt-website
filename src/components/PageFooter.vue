@@ -20,7 +20,9 @@
         a(href="https://shinjuku-lt.github.io/" target="_blank") PodCast
           | <i class="fas fa-external-link-alt"></i>
       li.footer_menu
-        a.login(@click="login()") Member Login
+        a.login(@click="logout()" v-if="authenticated") Member Logout
+        a.login(@click="login()" v-else) Member Login
+
     // v-toolbar(height="auto" align-center style="width:101%")
     //  v-layout(class="header")
     //    v-flex
