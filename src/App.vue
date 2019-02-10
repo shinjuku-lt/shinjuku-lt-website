@@ -38,7 +38,7 @@ export default {
   text-align: center;
   position: relative;
   background-size: cover;
-  font-size: 18px;
+  font-size: 16px;
   color: #333333;
   margin: 0 auto;
 }
@@ -110,5 +110,46 @@ a::hover{
 }
 p {
   line-height: 30px;
+}
+a {
+  color: #7CC7F5;
+  font-weight: 900;
+}
+a:hover {
+  opacity: 0.8;
+}
+.top-title {
+  display: inline-block;
+  position: relative;
+  color: #333333;
+  font-size: 32px;
+  font-weight: 900;
+  padding-bottom: 10px;
+  letter-spacing: 1.2px;
+  margin: 0px;
+}
+.top-title:before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: calc((100% - 20px)/2);
+  width: 20px;
+  height: 4px;
+  background-color: #DDDDDD;
+}
+@media screen and (max-width: 750px) {
+  #app {
+    font-size: 14px;
+  }
+  p {
+    line-height: 24px;
+  }
+  .top-title {
+    font-size: 18px;
+  }
+  .top-title:before {
+    top: 22px;
+    height: 3px;
+  }
 }
 </style>
