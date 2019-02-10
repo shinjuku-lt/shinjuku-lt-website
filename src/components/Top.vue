@@ -5,7 +5,7 @@
       div.flex
         pageHeader
     main
-      router-view
+      router-view(:authenticated="authenticated")
     pageFooter(:auth="auth" :authenticated="authenticated")
 </template>
 
