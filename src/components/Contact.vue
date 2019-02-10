@@ -28,10 +28,10 @@ div#contact
     div.sns_area
       div.tw_btn
         a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-twitter"></i>
-          p @Shinjuku_LT
+          div.tw_name @Shinjuku_LT
       div.ig_btn
         a(href="https://www.instagram.com/shinjukult/" target="_blank") <i class="fab fa-instagram"></i>
-          p shinjukult
+          div.ig_name shinjukult
           div.contents
   div.contents
     h3 開催場所と日時
@@ -91,5 +91,37 @@ export default {
   line-height: 60px;
   font-size: 40px;
   margin: 0 0 10px;
+}
+@media screen and (max-width: 750px) {
+  #contact {
+    margin: 10px 20px 40px;
+  }
+  #contact h3 {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 10px;
+  }
+  #contact .contents {
+    margin-top: 20px;
+  }
+  #contact .contents p {
+    text-align: left;
+  }
+  .sns_area {
+    margin: 10px 0 20px;
+    width: 80%;
+    padding: 20px 20px 10px;
+  }
+  .sns_area a {
+    display: block;
+  }
+  .tw_btn, .ig_btn {
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+  }
+  .tw_name, .ig_name {
+    text-align: center;
+  }
 }
 </style>
