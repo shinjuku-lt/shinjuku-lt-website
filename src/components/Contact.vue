@@ -104,9 +104,6 @@ export default {
   #contact .contents {
     margin-top: 20px;
   }
-  #contact .contents p {
-    text-align: left;
-  }
   .sns_area {
     margin: 10px 0 20px;
     width: 80%;

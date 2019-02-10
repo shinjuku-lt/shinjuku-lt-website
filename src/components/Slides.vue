@@ -89,25 +89,6 @@ export default {
 #slides {
   margin-top: 50px;
 }
-.top-title {
-  display: inline-block;
-  position: relative;
-  color: #333333;
-  font-size: 32px;
-  font-weight: 900;
-  padding-bottom: 10px;
-  letter-spacing: 1.2px;
-  margin: 0px;
-}
-.top-title:before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: calc((100% - 20px)/2);
-  width: 20px;
-  height: 4px;
-  background-color: #DDDDDD;
-}
 .slides-message {
   margin-top: 40px;
   line-height: 2em;
@@ -174,5 +155,53 @@ export default {
 .slide-preview:nth-child(3n + 2) {
   margin-right: 50px;
   margin-left:  50px;
+}
+@media screen and (max-width: 750px) {
+  #slides {
+    margin: 10px 20px 40px;
+  }
+  .slides-message {
+    margin-top: 10px;
+  }
+  .slides-year {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .slides-year:last-child {
+    margin-bottom: 30px;
+  }
+  .slide-months {
+    margin-top: 6px;
+    padding-top: 12px;
+  }
+  .slide-month {
+    font-size: 16px;
+    height: 27px;
+    width: 27px;
+    text-align: left;
+  }
+  .slide-month:nth-child(n+2){
+    margin: 0 10px 0 0;
+  }
+  .slide-previews {
+    margin: 10px 0;
+    display: grid;
+    flex-wrap: wrap;
+  }
+  .slide-preview {
+    display: inline-flex;
+  }
+  .slide-preview > iframe {
+    width: 100%;
+    height: 40vh;
+    margin: 0 0 10px;
+  }
+  .slide-preview:nth-child(n + 4) {
+    margin-top: 50px;
+  }
+  .slide-preview:nth-child(3n + 2) {
+    margin-right: 60px;
+    margin-left:  60px;
+  }
 }
 </style>
