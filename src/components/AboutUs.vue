@@ -76,9 +76,6 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-div.margin-bottom {
-  margin-bottom: 25px;
-}
 .about, .vision, .logo {
   margin-top: 80px;
 }
@@ -88,10 +85,6 @@ div.margin-bottom {
 .about-message {
   line-height: 2em;
   font-weight: 600;
-}
-.highlight {
-  display: inline;
-  background: linear-gradient(transparent 60%, #ffff66 60%);
 }
 .vision-list {
   margin-top: 35px;
@@ -228,10 +221,11 @@ div.margin-bottom {
   }
   .about-message {
     margin: 10px 20px 30px;
-    text-align: left;
+    text-align: center;
   }
   .vision-list {
-    margin-top: 0;
+    margin: 0 auto;
+    display: inline-block;
   }
   .vision-list > li {
     width: 24vh;
@@ -277,7 +271,7 @@ div.margin-bottom {
   .logo-message p {
     font-weight: 600;
     line-height: 25px;
-    text-align: left;
+    text-align: cente;
   }
   .quote {
     background: #F8F7F7;

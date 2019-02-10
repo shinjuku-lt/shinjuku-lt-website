@@ -109,7 +109,6 @@
   .members-message {
     margin-top: 10px;
     font-weight: 600;
-    text-align: left;
   }
   .full-width {
     margin-left: -200%;
