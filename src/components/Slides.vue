@@ -16,52 +16,12 @@
       | 過去の ShinjukuLTで発表されたスライドです。
       br
       | 随時こちらにアップロードしていきます！
-    //- span {{ slideYMs }}
-    div.slides-year(v-for="slide in slideYMs") {{ slide.key }}
-    //- div.slides-year(v-for="(slide, index) in slides" :key="index") {{ slide.year }}
+    div.slides-year(v-for="slides, year in slideYMs") {{ year }}
       div.slide-months
-        div.slide-month.slide-month-disabled 12
-        div.slide-month.slide-month-disabled 11
-        div.slide-month.slide-month-selected 10
-
-
-    //- div.slides-year 2019
-    //- div.slide-months
-    //-   div.slide-month.slide-month-disabled 12
-    //-   div.slide-month.slide-month-disabled 11
-    //-   div.slide-month.slide-month-selected 10
-    //-   div.slide-month 09
-    //-   div.slide-month 08
-    //-   div.slide-month 07
-    //-   div.slide-month 06
-    //-   div.slide-month 05
-    //-   div.slide-month 04
-    //-   div.slide-month 03
-    //-   div.slide-month 02
-    //-   div.slide-month 01
-    //- div.slide-previews
-    //-   div.slide-preview
-    //-   div.slide-preview
-    //-   div.slide-preview
-    //-   div.slide-preview
-    //-   div.slide-preview
-
-    //- div.slides-year 2018
-    //- div.slide-months
-    //-   div.slide-month 12
-    //-   div.slide-month 11
-    //-   div.slide-month 10
-    //-   div.slide-month 09
-    //-   div.slide-month 08
-    //-   div.slide-month 07
-    //-   div.slide-month 06
-    //-   div.slide-month 05
-    //-   div.slide-month 04
-    //-   div.slide-month 03
-    //-   div.slide-month 02
-    //-   div.slide-month 01
-    //- div.slide-previews
-    //-   div.slide-preview
+        div.slide-month(v-for="month in 12" :class=" Object.keys(slides).includes(month.toString())? '' : 'slide-month-disabled'" @click="selectYearMonth(year, month)") {{ month }}
+      div.slide-previews(v-for="month in 12" v-if="selectedYearMonth[year][month]")
+        div.slide-preview(v-for="slide in slides[month]")
+          iframe(:src="slide.page.url")
 </template>
 
 <script>
@@ -77,10 +37,10 @@ export default {
     return {
       loaded: true,
       selected: defaultYM,
-      selectShow: false,
       slideYMs: slideYMs,
       slides: SLIDES[this.selected],
-      test: 'border:1px solid #F0F'
+      test: 'border:1px solid #F0F',
+      selectedYearMonth: {}
     }
   },
   mounted () {
@@ -88,35 +48,51 @@ export default {
     axios.get('https://shinjuku-lt-backend.now.sh/slide', header)
       .then(response => {
         SLIDES = response.data
-        slideYMs = []
-        Object.keys(SLIDES).forEach(function (yearMonth) {
-          let tmpSlides = []
-          // 年月別のスライド集約
-          SLIDES[yearMonth].forEach(function (slide) {
-            tmpSlides.push({
-              type: slide.type,
-              presenter: slide.presenter,
-              url: slide.page.url,
-              width: slide.page.width,
-              height: slide.page.height
-            })
-          })
+        slideYMs = {}
+        // SLIDES.forEach(function (slides, yearMonth) {
+        for (var yearMonth in SLIDES) {
           // 返却するパラメタ作成
           const year = yearMonth.substring(0, 4)
           const month = parseInt(yearMonth.substring(4, 6))
-          slideYMs.push({
-            [year]: {[month]: tmpSlides}
-          })
-        }, SLIDES)
+          if (!slideYMs[year]) {
+            slideYMs[year] = {}
+          }
+          slideYMs[year][month] = SLIDES[yearMonth]
+          this.selectedYearMonth[year] = {}
+
+          // console.log(yearMonth)
+          // let tmpSlides = []
+          // 年月別のスライド集約
+          // SLIDES[yearMonth].forEach(function (slide) {
+          //   tmpSlides.push({
+          //     type: slide.type,
+          //     presenter: slide.presenter,
+          //     url: slide.page.url,
+          //     width: slide.page.width,
+          //     height: slide.page.height
+          //   })
+          // })
+          // すでに生成済みの月の年月の場合
+          // if (Object.keys(slideYMs).includes(year)) {
+          //   slideYMs[year].push({[month]: tmpSlides})
+          // } else {
+          //   slideYMs.push({
+          //     [year]: {[month]: tmpSlides}
+          //   })
+          // }
+        // }, SLIDES)
+        }
         this.slideYMs = slideYMs
+        // console.log(this.slideYMs)
       })
   },
-  updated () {
-    this.slides = SLIDES[this.selected]
-  },
-  watch: {
-    slideYMs: function (val) {
-      this.selectShow = true
+  methods: {
+    selectYearMonth (year, month) {
+      var hoge = Object.assign({}, this.selectedYearMonth)
+      hoge[year] = {}
+      hoge[year][month] = true
+      this.selectedYearMonth = hoge
+      console.log(this.selectedYearMonth)
     }
   }
 }
@@ -154,7 +130,6 @@ export default {
   font-size: 22px;
   font-weight: 900;
   text-align: left;
-  border-bottom: 2px solid #333333;
   padding-bottom: 8px;
   margin-top: 50px;
 }
@@ -162,7 +137,9 @@ export default {
   margin-bottom: 50px;
 }
 .slide-months {
-  margin-top: 26px;
+  border-top: 2px solid #333333;
+  margin-top: 10px;
+  padding-top: 20px;
   text-align: left;
 }
 .slide-month {
@@ -174,7 +151,7 @@ export default {
   text-align: center;
   cursor: pointer;
 }
-.slide-month-selected:before {
+.slide-month-active {
   content: '';
   background-color: #cccccc;
   height: 1.5em;
@@ -198,10 +175,11 @@ export default {
   flex-wrap: wrap;
 }
 .slide-preview {
+  display: inline-flex;
+}
+.slide-preview > iframe {
   width: 360px;
   height: 260px;
-  background-color: #e3e3e3;
-  display: inline-flex;
 }
 .slide-preview:nth-child(n + 4) {
   margin-top: 50px;

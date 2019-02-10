@@ -76,6 +76,9 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+div.margin-bottom {
+  margin-bottom: 25px;
+}
 .about, .vision, .logo {
   margin-top: 80px;
 }
