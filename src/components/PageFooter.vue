@@ -6,7 +6,7 @@
       div.tw_btn
         a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-twitter"></i>
       div.ig_btn
-        a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-instagram"></i>
+        a(href="https://www.instagram.com/shinjukult/" target="_blank") <i class="fab fa-instagram"></i>
     ul.footer_nav
       li.footer_menu
         <router-link to="/members">Member</router-link>
@@ -22,10 +22,6 @@
       li.footer_menu
         a.login(@click="logout()" v-if="authenticated") Member Logout
         a.login(@click="login()" v-else) Member Login
-
-    // v-toolbar(height="auto" align-center style="width:101%")
-    //  v-layout(class="header")
-    //    v-flex
 </template>
 
 <script>

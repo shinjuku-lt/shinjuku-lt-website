@@ -8,21 +8,20 @@ div#next
     h3 日時
     div.next_wrap
       div.date {{nextDate}} （{{dayOfWeek}}）
-      div.time_wrap
-        div(v-for="(v, k) in schedule")
-          p.time {{v.time}}:
-          p.content {{v.content}}
+      div.time_wrap.clearfix(v-for="(v, k) in schedule")
+        p.time {{v.time}}：
+        p.content {{v.content}}
       a(target="_blank" :href="googleCalendar")
-        img(src="https://www.google.com/calendar/images/ext/gc_button1_en.gif")
+        <img src="../assets/google_calendar.svg">
+        | google カレンダー
   div.contents
     h3 日時
     div.next_wrap
-      a(:href="companyLink" target="t_blank") @{{company}}
+      a.company(:href="companyLink" target="t_blank") @{{company}}
       p {{address}}
       iframe.map(
         :src="googleMap"
         frameborder="0"
-        style="width: 100% !important"
       )
 </template>
 
@@ -106,24 +105,39 @@ div#next
   padding: 36px 60px;
   border-radius: 20px;
 }
-.time_wrap {
-  width: 80%;
+.next_wrap a img {
+  width: 40px;
+  margin: 20px 10px -10px;
 }
 .next_wrap .date {
   font-size: 24px;
   font-weight: 900;
   margin: 0 0 20px;
 }
-.next_wrap .time {
-  text-align: left;
+.time_wrap {
+  width: 100%;
   margin: 0 auto;
-  widows: 30%;
 }
-
+.time_wrap .time {
+  text-align: right;
+  width: 50%;
+  float: left;
+}
+.time_wrap .content {
+  text-align: left;
+  width: 50%;
+  float: right;
+}
+.next_wrap .company {
+  font-size: 24px;
+  margin: 0 0 20px;
+  display: inline-block;
+}
 iframe.map {
-  width: 500px;
-  height: 400px;
+  width: 80%;
+  height: 460px;
   border: solid 1px;
-  border-color: #3A507D;
+  border-color: #333;
+  margin: 20px auto;
 }
 </style>

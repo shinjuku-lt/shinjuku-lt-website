@@ -16,43 +16,51 @@
       | 過去の ShinjukuLTで発表されたスライドです。
       br
       | 随時こちらにアップロードしていきます！
-    div.slides-year 2019
-    div.slide-months
-      div.slide-month 12
-      div.slide-month 11
-      div.slide-month 10
-      div.slide-month 9
-      div.slide-month 8
-      div.slide-month 7
-      div.slide-month 6
-      div.slide-month 5
-      div.slide-month 4
-      div.slide-month 3
-      div.slide-month 2
-      div.slide-month 1
-    div.slide-previews
-      div.slide-preview
-      div.slide-preview
-      div.slide-preview
-      div.slide-preview
-      div.slide-preview
+    span {{ slideYMs }}
+    div.slides-year(v-for="(slide, index) in slides" :key="index") {{ slide.year }}
+      div.slide-months
+        div.slide-month.slide-month-disabled 12
+        div.slide-month.slide-month-disabled 11
+        div.slide-month.slide-month-selected 10
 
-    div.slides-year 2018
-    div.slide-months
-      div.slide-month 12
-      div.slide-month 11
-      div.slide-month 10
-      div.slide-month 9
-      div.slide-month 8
-      div.slide-month 7
-      div.slide-month 6
-      div.slide-month 5
-      div.slide-month 4
-      div.slide-month 3
-      div.slide-month 2
-      div.slide-month 1
-    div.slide-previews
-      div.slide-preview
+
+    //- div.slides-year 2019
+    //- div.slide-months
+    //-   div.slide-month.slide-month-disabled 12
+    //-   div.slide-month.slide-month-disabled 11
+    //-   div.slide-month.slide-month-selected 10
+    //-   div.slide-month 09
+    //-   div.slide-month 08
+    //-   div.slide-month 07
+    //-   div.slide-month 06
+    //-   div.slide-month 05
+    //-   div.slide-month 04
+    //-   div.slide-month 03
+    //-   div.slide-month 02
+    //-   div.slide-month 01
+    //- div.slide-previews
+    //-   div.slide-preview
+    //-   div.slide-preview
+    //-   div.slide-preview
+    //-   div.slide-preview
+    //-   div.slide-preview
+
+    //- div.slides-year 2018
+    //- div.slide-months
+    //-   div.slide-month 12
+    //-   div.slide-month 11
+    //-   div.slide-month 10
+    //-   div.slide-month 09
+    //-   div.slide-month 08
+    //-   div.slide-month 07
+    //-   div.slide-month 06
+    //-   div.slide-month 05
+    //-   div.slide-month 04
+    //-   div.slide-month 03
+    //-   div.slide-month 02
+    //-   div.slide-month 01
+    //- div.slide-previews
+    //-   div.slide-preview
 </template>
 
 <script>
@@ -79,11 +87,25 @@ export default {
       .then(response => {
         SLIDES = response.data
         slideYMs = []
-        Object.keys(SLIDES).forEach(function (month) {
-          slideYMs.push({
-            text: month,
-            value: month
+        Object.keys(SLIDES).forEach(function (yearMonth) {
+          let tmpSlides = []
+          // 年月別のスライド集約
+          SLIDES[yearMonth].forEach(function (slide) {
+            tmpSlides.push({
+              type: slide.type,
+              presenter: slide.presenter,
+              url: slide.page.url,
+              width: slide.page.width,
+              height: slide.page.height
+            })
           })
+          // 返却するパラメタ作成
+          const year = yearMonth.substring(0, 4)
+          const month = parseInt(yearMonth.substring(4, 6)).toString
+          const monthSlides = hash(month, tmpSlides)
+          slideYMs.push(
+            hash(year, monthSlides)
+          )
         }, SLIDES)
         this.slideYMs = slideYMs
       })
@@ -96,6 +118,11 @@ export default {
       this.selectShow = true
     }
   }
+}
+function hash(key, value) {
+  var h = {};
+  h[key] = value;
+  return h;
 }
 </script>
 
@@ -149,6 +176,22 @@ export default {
   width: 27px;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
+}
+.slide-month-selected:before {
+  content: '';
+  background-color: #cccccc;
+  height: 1.5em;
+  width: 2em;
+  margin-left: -5px;
+  position: absolute;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.slide-month-disabled {
+  color: #CCCCCC;
+  cursor: none;
 }
 .slide-month:nth-child(n+2){
   margin-left: 20px;

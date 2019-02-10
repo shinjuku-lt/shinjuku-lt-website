@@ -30,8 +30,8 @@ div#contact
         a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-twitter"></i>
           p @Shinjuku_LT
       div.ig_btn
-        a(href="https://twitter.com/Shinjuku_LT?lang=ja" target="_blank") <i class="fab fa-instagram"></i>
-          p ShinjukuLT
+        a(href="https://www.instagram.com/shinjukult/" target="_blank") <i class="fab fa-instagram"></i>
+          p shinjukult
           div.contents
   div.contents
     h3 開催場所と日時

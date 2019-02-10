@@ -24,23 +24,6 @@ div#pageHeader
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media screen and (min-width: 1200px) {
-  .btn {
-    // width: 80px;
-    // height: 80px;
-    // font-size: 16px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .btn {
-    width: 50px;
-    height: 50px;
-    font-size: 8px;
-  }
-  .min-reset-container{
-    padding: 0 !important;
-  }
-}
 h1, h2 {
   font-weight: normal;
 }
@@ -67,13 +50,11 @@ a {
   display: inline-block;
   margin-left: 40px; 
 }
+/* .header_menu a:hover {
+  text-decoration: underline 
+} */
 .fa-external-link-alt {
   margin-left: 4px;
-}
-.clearfix::after{
-  content: "";
-  display: block;
-  clear: both;
 }
 #pageHeader {
   width: 1200px;
