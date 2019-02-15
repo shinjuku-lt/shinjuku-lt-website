@@ -1,10 +1,19 @@
 <template lang="pug">
   div#app
-    router-view(:auth="auth" :authenticated="authenticated")
+    div#top
+      div.header
+        div.flex
+          pageHeader
+      main
+        router-view(:authenticated="authenticated")
+      pageFooter(:auth="auth" :authenticated="authenticated")
 </template>
+
 
 <script>
 import AuthService from './auth/AuthService'
+import pageHeader from './components/PageHeader'
+import pageFooter from './components/PageFooter'
 
 const auth = new AuthService()
 
@@ -26,6 +35,9 @@ export default {
     if (auth.getAuthenticatedFlag() === true) {
       auth.renewSession()
     }
+  },
+  components: {
+    pageHeader, pageFooter
   }
 }
 </script>
