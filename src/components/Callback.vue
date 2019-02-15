@@ -6,6 +6,7 @@
     name: 'callback',
     props: ['auth'],
     created () {
+      console.log('asSADFADSFADF')
       this.auth.handleAuthentication()
     }
   }
