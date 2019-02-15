@@ -11,7 +11,7 @@ import Callback from '@/components/Callback'
 Vue.use(Router)
 
 const router = new Router({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
