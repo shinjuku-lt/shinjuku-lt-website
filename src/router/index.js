@@ -17,7 +17,6 @@ const router = new Router({
       path: '/',
       name: 'Top',
       component: Top,
-      redirect: '/aboutus',
       children: [
         {
           path: '/',
