@@ -19,6 +19,11 @@ const router = new Router({
       component: Top,
       children: [
         {
+          path: '/aboutus',
+          name: 'AboutUs',
+          component: AboutUs
+        },
+        {
           path: '/members',
           name: 'Members',
           component: Members
@@ -45,11 +50,11 @@ const router = new Router({
           component: Callback
         }
       ]
-    },
-    {
-      path: '/aboutus',
-      name: 'AboutUs',
-      component: AboutUs
+    // },
+    // {
+    //   path: '/aboutus',
+    //   name: 'AboutUs',
+    //   component: AboutUs
     }
   ]
 })

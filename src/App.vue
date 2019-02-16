@@ -1,5 +1,10 @@
 <template lang="pug">
-  router-view(:auth="auth" :authenticated="authenticated")
+  #app
+    .header-outer
+      header
+        h1.site-title
+    transition(name="fade")
+      router-view(:auth="auth" :authenticated="authenticated")
 </template>
 
 <script>
