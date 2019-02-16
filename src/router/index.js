@@ -19,16 +19,6 @@ const router = new Router({
       component: Top,
       children: [
         {
-          path: '/',
-          name: 'Top',
-          component: AboutUs
-        },
-        {
-          path: '/aboutus',
-          name: 'AboutUs',
-          component: AboutUs
-        },
-        {
           path: '/members',
           name: 'Members',
           component: Members
