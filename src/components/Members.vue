@@ -1,6 +1,6 @@
 <template lang="pug">
   div#members
-    h2.top-title Members
+    h2.main-title Members
     div.members-message
       | Shinjuku.LTの主要メンバーを紹介します！
       br
@@ -34,7 +34,8 @@
 
 <style>
 #members {
-  margin-top: 50px;
+  width: 1000px;
+  margin: 50px auto 0;
 }
 .members-message {
   margin-top: 40px;
@@ -102,12 +103,13 @@
   font-size: 14px;
   font-weight: 500;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #members {
-    margin: 10px 20px 40px;
+    width: 100%;
+    margin: 20px auto 40px;
   }
   .members-message {
-    margin-top: 10px;
+    margin: 10px 20px 30px;
     font-weight: 600;
   }
   .full-width {

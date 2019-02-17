@@ -1,6 +1,6 @@
 <template lang="pug">
 div#next
-  h2.top-title Next
+  h2.main-title Next
   div.contents
     p 次回のShinkuju.LTの開催場所と日時です。
     p ご都合をお合わせの上、ご参加ください。
@@ -118,7 +118,7 @@ iframe.map {
   border-color: #333;
   margin: 20px auto;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #next {
     margin: 10px 20px 40px;
   }
@@ -148,7 +148,7 @@ iframe.map {
   iframe.map {
     width: 100%;
     height: 300px;
-    margin: 20px auto 0; 
+    margin: 20px auto 0;
   }
 }
 </style>

@@ -1,8 +1,9 @@
 <template lang="pug">
 div#aboutus
-  div.top-logo
+  div.main_visual
+    <img src="../assets/main_visual.png">
   div.about
-    h2.top-title ABOUT
+    h2.main-title ABOUT
     div.about-message
       p Shinjuku.LTは
         span.highlight 世界で一番LTのハードルが低い勉強会
@@ -11,7 +12,7 @@ div#aboutus
       p ということは、発表する機会をつくることで勉強になる人が増えるのではないかという理念を元に開催しています。
       p 2016年09月に発足し、そこから毎月一回のペースで開催しています。
   div.vision
-    h2.top-title VISION
+    h2.main-title VISION
     ul.vision-list
       li
         <img class="vision-image vision-image-lt" src="../assets/vision_icon_1.png">
@@ -39,7 +40,7 @@ div#aboutus
             br
             | 同士で繋がりを持つ
   div.logo
-    h2.top-title LOGO
+    h2.main-title LOGO
     div.logo-wrap
       div.img-box
         <img src="../assets/logo.png">
@@ -70,19 +71,19 @@ export default {
 </script>
 
 <style scoped>
-.top-logo {
-  height: 270px;
-  background-image: url('../assets/main_visual.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
+.main_visual {
+  width: 100%;
+  overflow: hidden;
 }
-.about, .vision, .logo {
-  margin-top: 80px;
+.main_visual img {
+  max-width: 100%;
+}
+.about, .vision {
+  width: 1000px;
+  margin: 80px auto 0;
 }
 .about-message {
   margin-top: 40px;
-}
-.about-message {
   line-height: 2em;
   font-weight: 600;
 }
@@ -106,7 +107,6 @@ export default {
   -ms-flex-wrap:wrap;
   flex-wrap:wrap;
 }
-
 .vision-list > li {
   width: 230px;
   height: 230px;
@@ -117,11 +117,9 @@ export default {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
-
 .vision-list > li:nth-child(n+2) {
   margin-left: 26px;
 }
-
 .vision-message {
   height: 85px;
   font-weight: 700;
@@ -151,7 +149,8 @@ export default {
   top: 0%;
 }
 .logo {
-  margin: 80px 0 100px;
+  width: 1000px;
+  margin: 80px auto 100px;
   overflow: auto;
 }
 .logo-wrap {
@@ -212,12 +211,15 @@ export default {
   margin: 0;
   padding: 0 70px;
 }
-@media screen and (max-width: 750px) {
-  .top-logo {
-    height: 15vh;
+@media screen and (max-width: 768px) {
+  .main_visual img {
+    max-width: 240%;
+    position: relative;
+    right: 70%;
   }
-  .about, .vision, .logo {
-    margin-top: 20px;
+  .about, .vision {
+    width: 100%;
+    margin: 20px auto 0;
   }
   .about-message {
     margin: 10px 20px 30px;
@@ -249,8 +251,8 @@ export default {
     top: 8%;
   }
   .logo {
+    width: 100%;
     margin: 40px 0 40px;
-    overflow: auto;
   }
   .logo-wrap {
     margin: 10px 20px;
@@ -263,45 +265,19 @@ export default {
   .logo-message {
     width: 100%;
     float: none;
+    text-align: center;
   }
   .logo-message h3 {
     font-size: 16px;
     margin: 0 0 2px;
   }
-  .logo-message p {
-    font-weight: 600;
-    line-height: 25px;
-    text-align: cente;
-  }
-  .quote {
-    background: #F8F7F7;
-    padding: 24px 0;
-    margin: 15px 0 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    color: #868686;
-  }
   .quote:after {
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 900;
-    position: absolute;
-    content: "\F10d";
-    font-size: 30px;
-    color: #E6E6E6;
-    top: 10px;
-    left: 20px;
-  }
-  .quote h4 {
-    font-weight: bold;
-    margin: 0 0 10px;
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 24px;
   }
   .quote p {
     font-size: 13px;
     line-height: 20px;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }
 </style>

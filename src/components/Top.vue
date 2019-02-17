@@ -1,8 +1,6 @@
 <template lang="pug">
   div#top
-    div.header
-      div.flex
-        pageHeader
+    pageHeader
     main
       router-view(:authenticated="authenticated")
     pageFooter(:auth="auth" :authenticated="authenticated")
@@ -24,18 +22,11 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  height: 120px;
-}
-main, .header {
-  width: 1000px;
+main {
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-  .header {
-    height: 12vh;
-  }
-  main, .header {
+  main {
     width: 100%;
   }
 }

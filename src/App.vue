@@ -31,24 +31,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Rounded Mplus 1c', Helvetica, Arial, mplus-1p-regular, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  position: relative;
-  background-size: cover;
-  font-size: 16px;
-  color: #333333;
-  margin: 0 auto;
-}
-
-main {
-  font-family: "Rounded Mplus 1c";
-  color: #666;
-  margin: auto;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -108,8 +90,19 @@ a::hover{
   display: block;
   clear: both;
 }
-p {
+
+#app {
+  font-family: 'Rounded Mplus 1c', Helvetica, Arial, mplus-1p-regular, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  font-size: 16px;
   line-height: 30px;
+  color: #333333;
+  margin: 0 auto;
+  font-weight: 600;
 }
 a {
   color: #7CC7F5;
@@ -118,7 +111,7 @@ a {
 a:hover {
   opacity: 0.8;
 }
-.top-title {
+.main-title {
   display: inline-block;
   position: relative;
   color: #333333;
@@ -128,7 +121,7 @@ a:hover {
   letter-spacing: 1.2px;
   margin: 0px;
 }
-.top-title:before {
+.main-title:before {
   content: '';
   position: absolute;
   top: 50px;
@@ -140,15 +133,13 @@ a:hover {
 @media screen and (max-width: 750px) {
   #app {
     font-size: 14px;
-  }
-  p {
     line-height: 24px;
   }
-  .top-title {
+  .main-title {
     font-size: 18px;
   }
-  .top-title:before {
-    top: 22px;
+  .main-title:before {
+    top: 28px;
     height: 3px;
   }
 }

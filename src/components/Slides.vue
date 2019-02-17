@@ -1,6 +1,6 @@
 <template lang="pug">
   div#slides
-    h2.top-title Slides
+    h2.main-title Slides
     div.slides-message
       | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など
       br
@@ -156,7 +156,7 @@ export default {
   margin-right: 50px;
   margin-left:  50px;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #slides {
     margin: 10px 20px 40px;
   }
