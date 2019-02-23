@@ -15,7 +15,7 @@ div#next
         <img src="../assets/google_calendar.svg">
         | google カレンダー
   div.contents
-    h3 日時
+    h3 場所
     div.next_wrap
       a.company(:href="companyLink" target="t_blank") @{{company}}
       p {{address}}
