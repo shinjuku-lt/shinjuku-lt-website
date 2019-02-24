@@ -240,6 +240,8 @@ export default {
   .vision-message {
     height: 6vh;
     bottom: -50px;
+    font-size: 12px;
+    line-height: 18px;
   }
   .vision-image {
     top: 5%;

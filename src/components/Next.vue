@@ -18,7 +18,7 @@ div#next
     h3 場所
     div.next_wrap
       a.company(:href="companyLink" target="t_blank") @{{company}}
-      p {{address}}
+      p.address {{address}}
       iframe.map(
         :src="googleMap"
         frameborder="0"
@@ -60,6 +60,7 @@ div#next
 
 <style scoped>
 #next {
+  width: 1000px;
   margin: 50px auto;
 }
 #next h3 {
@@ -73,8 +74,8 @@ div#next
 }
 #next .contents {
   margin-top: 40px;
-  line-height: 1em;
-  font-weight: 700;
+  line-height: 2em;
+  font-weight: 600;
 }
 .next_wrap {
   margin: 0 auto 40px;
@@ -120,7 +121,8 @@ iframe.map {
 }
 @media screen and (max-width: 768px) {
   #next {
-    margin: 10px 20px 40px;
+    width: 100%;
+    margin: 20px auto 0;
   }
   #next h3 {
     font-size: 18px;
@@ -128,12 +130,15 @@ iframe.map {
     margin: 0 0 10px;
   }
   #next .contents {
-    margin-top: 10px;
+    margin: 10px 20px 30px;
   }
   .next_wrap {
     margin: 0 auto 20px;
-    width: 90%;
-    padding: 20px 20px 30px;
+    width: 100%;
+    padding: 20px 0 30px;
+  }
+  .address {
+    margin: 0 10px;
   }
   .next_wrap a img {
     width: 30px;
@@ -146,7 +151,7 @@ iframe.map {
     font-size: 18px;
   }
   iframe.map {
-    width: 100%;
+    width: 85%;
     height: 300px;
     margin: 20px auto 0;
   }

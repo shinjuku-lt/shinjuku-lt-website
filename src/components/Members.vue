@@ -40,7 +40,7 @@
 .members-message {
   margin-top: 40px;
   line-height: 2em;
-  font-weight: 900;
+  font-weight: 600;
 }
 .full-width {
   margin-left: -200%;
@@ -106,22 +106,15 @@
 @media screen and (max-width: 768px) {
   #members {
     width: 100%;
-    margin: 20px auto 40px;
+    margin: 20px auto 0;
   }
   .members-message {
     margin: 10px 20px 30px;
     font-weight: 600;
   }
-  .full-width {
-    margin-left: -200%;
-    margin-right: -200%;
-    padding: 0 200%;
-    width: 1000px;
-    box-sizing: content-box;
-  }
   .member-items {
-    margin-top: 10px;
-    padding-bottom: 20px;
+    margin: 10px 0 0;
+    padding: 0 0 20px;
     width: 100%;
   }
   .member-item {
@@ -143,7 +136,8 @@
     font-size: 15px;
   }
   .member-job, .member-skill, .member-comment{
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 </style>
