@@ -1,6 +1,6 @@
 <template lang="pug">
   div#slides
-    h2.top-title Slides
+    h2.main-title Slides
     div.slides-message
       | 内容はテック系に限らず、マネジメント、デザイン、キャリアについて…など
       br
@@ -87,10 +87,11 @@ export default {
 
 <style>
 #slides {
-  margin-top: 50px;
+  width: 1000px;
+  margin: 50px auto 100px;
 }
 .slides-message {
-  margin-top: 40px;
+  margin: 40px auto 0;
   line-height: 2em;
   font-weight: 600;
 }
@@ -99,7 +100,7 @@ export default {
   font-weight: 900;
   text-align: left;
   padding-bottom: 8px;
-  margin-top: 50px;
+  margin: 50px auto 0;
 }
 .slides-year:last-child {
   margin-bottom: 50px;
@@ -126,9 +127,9 @@ export default {
   height: 1.5em;
   width: 2em;
   margin-left: -5px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
 }
 .slide-month-disabled {
   color: #CCCCCC;
@@ -156,16 +157,18 @@ export default {
   margin-right: 50px;
   margin-left:  50px;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #slides {
-    margin: 10px 20px 40px;
+    width: 100%;
+    margin: 20px auto 40px;
   }
   .slides-message {
-    margin-top: 10px;
+    margin: 10px 20px 30px;
+    font-weight: 600;
   }
   .slides-year {
     font-size: 18px;
-    margin-top: 30px;
+    margin: 30px 20px;
   }
   .slides-year:last-child {
     margin-bottom: 30px;
@@ -175,21 +178,20 @@ export default {
     padding-top: 12px;
   }
   .slide-month {
-    font-size: 16px;
-    height: 27px;
-    width: 27px;
-    text-align: left;
+    font-size: 14px;
+    height: 24px;
+    width: 30px;
+    text-align: center;
   }
   .slide-month:nth-child(n+2){
     margin: 0 10px 0 0;
   }
   .slide-previews {
     margin: 10px 0;
-    display: grid;
     flex-wrap: wrap;
   }
   .slide-preview {
-    display: inline-flex;
+    display: contents;
   }
   .slide-preview > iframe {
     width: 100%;

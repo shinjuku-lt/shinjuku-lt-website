@@ -1,6 +1,6 @@
 <template lang="pug">
 div#contact
-  h2.top-title Contact
+  h2.main-title Contact
   div.contents
     h3 ご参加方法
     p Shinjuku.LTは現在、会場の兼ね合いでconnpass等の外部サイトでの参加募集は行っておりません。
@@ -54,6 +54,7 @@ export default {
 
 <style scoped>
 #contact {
+  width: 1000px;
   margin: 50px auto;
 }
 #contact h3 {
@@ -67,8 +68,8 @@ export default {
 }
 #contact .contents {
   margin-top: 40px;
-  line-height: 1em;
-  font-weight: 700;
+  line-height: 2em;
+  font-weight: 600;
 }
 .sns_area {
   display: inline-block;
@@ -92,9 +93,10 @@ export default {
   font-size: 40px;
   margin: 0 0 10px;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #contact {
-    margin: 10px 20px 40px;
+    width: 100%;
+    margin: 20px auto 0;
   }
   #contact h3 {
     font-size: 15px;
@@ -102,7 +104,7 @@ export default {
     margin: 0 0 10px;
   }
   #contact .contents {
-    margin-top: 20px;
+    margin: 10px 20px 30px;
   }
   .sns_area {
     margin: 10px 0 20px;

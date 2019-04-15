@@ -93,7 +93,7 @@ export default {
 .login {
   cursor: pointer;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #footer {
     padding: 30px 20px 0;
   }
@@ -118,10 +118,14 @@ export default {
     padding: 20px 0;
   }
   .footer_menu {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 10px;
-    padding: 0 9px;
+    padding: 0 6px;
     margin: 0 0 14px;
+  }
+  .footer_menu a i {
+    font-size: 10px;
+    color: #ccc;
   }
   .footer_menu:first-child {
     border-left: none;
